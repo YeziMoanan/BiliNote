@@ -4,6 +4,7 @@ import argparse
 import json
 import math
 import os
+import tempfile
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -92,13 +93,24 @@ def github_get_json(
         "X-GitHub-Api-Version": "2022-11-28",
     }
     if token:
-        headers["Authorization"] = f"Bearer {token}"
+        destination = parse.urlsplit(url)
+        if (
+            destination.scheme != "https"
+            or destination.hostname != "api.github.com"
+        ):
+            raise ValueError(
+                "authenticated requests require an HTTPS api.github.com URL"
+            )
 
     for attempt in range(3):
         try:
             api_request = request.Request(
                 url, headers=headers, method="GET"
             )
+            if token:
+                api_request.add_unredirected_header(
+                    "Authorization", f"Bearer {token}"
+                )
             with request.urlopen(api_request, timeout=30) as response:
                 payload = json.loads(response.read().decode("utf-8"))
         except (error.HTTPError, error.URLError, TimeoutError) as exc:
@@ -126,8 +138,8 @@ def fetch_open_issues(
     repo_parts = [part.strip() for part in repo.strip().split("/")]
     if len(repo_parts) != 2 or not all(repo_parts):
         raise ValueError("repo must be a non-empty owner/name")
-    if per_page <= 0:
-        raise ValueError("per_page must be greater than zero")
+    if not 1 <= per_page <= 100:
+        raise ValueError("per_page must be between 1 and 100")
 
     owner, name = repo_parts
     endpoint = (
@@ -135,6 +147,7 @@ def fetch_open_issues(
         f"{parse.quote(owner, safe='')}/{parse.quote(name, safe='')}/issues"
     )
     api_issues: list[Issue] = []
+    full_page_signatures: set[tuple[tuple[str, bool], ...]] = set()
     page = 1
     while True:
         query = parse.urlencode(
@@ -147,6 +160,16 @@ def fetch_open_issues(
             }
         )
         payload = request_json(f"{endpoint}?{query}", token)
+        if len(payload) == per_page:
+            signature = tuple(
+                (str(item.get("number")), "pull_request" in item)
+                for item in payload
+            )
+            if signature in full_page_signatures:
+                raise RuntimeError(
+                    "GitHub issue pagination returned a repeated full page"
+                )
+            full_page_signatures.add(signature)
         api_issues.extend(
             Issue.from_api(item)
             for item in payload
@@ -269,29 +292,60 @@ def write_roadmap(
             f"expected {expected_count} open issues, got {len(issues)}; "
             "review upstream issue state before exporting"
         )
+    seen_numbers: set[int] = set()
+    duplicate_numbers: set[int] = set()
+    for issue in issues:
+        if issue.number in seen_numbers:
+            duplicate_numbers.add(issue.number)
+        seen_numbers.add(issue.number)
+    if duplicate_numbers:
+        raise RuntimeError(
+            "duplicate issue numbers in snapshot: "
+            f"{sorted(duplicate_numbers)}"
+        )
 
-    output_dir.mkdir(parents=True, exist_ok=True)
     snapshot = json.dumps(
         [issue.to_json_dict() for issue in issues],
         ensure_ascii=False,
         indent=2,
     )
-    (output_dir / "issues-snapshot.json").write_text(
-        snapshot + "\n", encoding="utf-8", newline="\n"
-    )
-    (output_dir / "README.md").write_text(
-        render_readme(issues, snapshot_date, stage_size=stage_size),
-        encoding="utf-8",
-        newline="\n",
-    )
-
+    artifacts = {
+        "issues-snapshot.json": snapshot + "\n",
+        "README.md": render_readme(
+            issues, snapshot_date, stage_size=stage_size
+        ),
+    }
     stage_count = math.ceil(len(issues) / stage_size)
     for stage in range(1, stage_count + 1):
-        (output_dir / f"stage-{stage:02d}.md").write_text(
-            render_stage(issues, stage=stage, stage_size=stage_size),
-            encoding="utf-8",
-            newline="\n",
+        artifacts[f"stage-{stage:02d}.md"] = render_stage(
+            issues, stage=stage, stage_size=stage_size
         )
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    temp_paths: dict[str, Path] = {}
+    try:
+        for filename, contents in artifacts.items():
+            descriptor, temp_name = tempfile.mkstemp(
+                dir=output_dir,
+                prefix=f".{filename}.",
+                suffix=".tmp",
+            )
+            os.close(descriptor)
+            temp_path = Path(temp_name)
+            temp_paths[filename] = temp_path
+            temp_path.write_text(
+                contents, encoding="utf-8", newline="\n"
+            )
+
+        for filename, temp_path in temp_paths.items():
+            os.replace(temp_path, output_dir / filename)
+
+        for stage_path in output_dir.glob("stage-*.md"):
+            if stage_path.name not in artifacts:
+                stage_path.unlink()
+    finally:
+        for temp_path in temp_paths.values():
+            temp_path.unlink(missing_ok=True)
 
 
 def parse_args() -> argparse.Namespace:

@@ -114,6 +114,60 @@ def test_github_get_json_sets_required_headers_token_and_timeout(
     }
 
 
+def test_github_get_json_keeps_token_out_of_redirected_headers(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    captured_request: request.Request | None = None
+
+    def fake_urlopen(
+        api_request: request.Request, *, timeout: int
+    ) -> FakeResponse:
+        del timeout
+        nonlocal captured_request
+        captured_request = api_request
+        return FakeResponse(b"[]")
+
+    monkeypatch.setattr(request, "urlopen", fake_urlopen)
+
+    roadmap.github_get_json(
+        "https://api.github.com/repos/owner/repo/issues", "test-token"
+    )
+
+    assert captured_request is not None
+    assert "Authorization" not in captured_request.headers
+    assert captured_request.unredirected_hdrs["Authorization"] == (
+        "Bearer test-token"
+    )
+
+
+@pytest.mark.parametrize(
+    "url",
+    [
+        "http://api.github.com/repos/owner/repo/issues",
+        "https://example.com/repos/owner/repo/issues",
+        "https://api.github.com.example.com/repos/owner/repo/issues",
+    ],
+)
+def test_github_get_json_rejects_unsafe_token_destination_before_network(
+    monkeypatch: pytest.MonkeyPatch,
+    url: str,
+) -> None:
+    network_called = False
+
+    def fail_if_called(*args: object, **kwargs: object) -> FakeResponse:
+        del args, kwargs
+        nonlocal network_called
+        network_called = True
+        raise AssertionError("network must not be called")
+
+    monkeypatch.setattr(request, "urlopen", fail_if_called)
+
+    with pytest.raises(ValueError, match="HTTPS api.github.com"):
+        roadmap.github_get_json(url, "secret-token")
+
+    assert network_called is False
+
+
 def test_github_get_json_omits_authorization_without_token(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
@@ -259,10 +313,51 @@ def test_fetch_open_issues_stops_when_payload_exceeds_page_size() -> None:
     assert [issue.number for issue in issues] == [3, 2, 1]
 
 
+def test_fetch_open_issues_rejects_a_repeated_full_page() -> None:
+    request_count = 0
+
+    def fake_request(url: str, token: str | None) -> list[dict[str, object]]:
+        del url, token
+        nonlocal request_count
+        request_count += 1
+        if request_count > 2:
+            raise AssertionError("pagination loop guard did not stop")
+        return [api_issue(2), api_issue(1)]
+
+    with pytest.raises(RuntimeError, match="repeated full page"):
+        roadmap.fetch_open_issues(
+            "JefferyHcool/BiliNote",
+            per_page=2,
+            request_json=fake_request,
+        )
+
+    assert request_count == 2
+
+
 @pytest.mark.parametrize("repo", ["", "owner", "/repo", "owner/"])
 def test_fetch_open_issues_rejects_invalid_repo(repo: str) -> None:
     with pytest.raises(ValueError, match="owner/name"):
         roadmap.fetch_open_issues(repo)
+
+
+@pytest.mark.parametrize("per_page", [0, 101])
+def test_fetch_open_issues_rejects_per_page_outside_github_range(
+    per_page: int,
+) -> None:
+    request_called = False
+
+    def fail_if_called(url: str, token: str | None) -> list[dict[str, object]]:
+        del url, token
+        nonlocal request_called
+        request_called = True
+        raise AssertionError("request must not be called")
+
+    with pytest.raises(ValueError, match="per_page must be between 1 and 100"):
+        roadmap.fetch_open_issues(
+            "owner/repo", per_page=per_page, request_json=fail_if_called
+        )
+
+    assert request_called is False
 
 
 def test_write_roadmap_creates_snapshot_readme_and_all_stages(
@@ -305,6 +400,82 @@ def test_write_roadmap_creates_snapshot_readme_and_all_stages(
     ) == render_stage(issues, stage=2, stage_size=10)
 
 
+def test_write_roadmap_removes_obsolete_stage_files_on_rerun(
+    tmp_path: Path,
+) -> None:
+    initial_issues = ordered_issues(
+        [
+            make_issue(number, f"2026-07-{number:02d}T00:00:00Z")
+            for number in range(1, 12)
+        ]
+    )
+    roadmap.write_roadmap(
+        initial_issues,
+        tmp_path,
+        snapshot_date="2026-07-15",
+        expected_count=11,
+        stage_size=10,
+    )
+
+    remaining_issues = initial_issues[:5]
+    roadmap.write_roadmap(
+        remaining_issues,
+        tmp_path,
+        snapshot_date="2026-07-16",
+        expected_count=5,
+        stage_size=10,
+    )
+
+    assert sorted(path.name for path in tmp_path.iterdir()) == [
+        "README.md",
+        "issues-snapshot.json",
+        "stage-01.md",
+    ]
+
+
+def test_write_roadmap_temp_failure_preserves_existing_artifacts(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    initial_issues = ordered_issues(
+        [
+            make_issue(number, f"2026-07-{number:02d}T00:00:00Z")
+            for number in range(1, 12)
+        ]
+    )
+    roadmap.write_roadmap(
+        initial_issues,
+        tmp_path,
+        snapshot_date="2026-07-15",
+        expected_count=11,
+        stage_size=10,
+    )
+    before = {path.name: path.read_bytes() for path in tmp_path.iterdir()}
+    original_write_text = Path.write_text
+    write_count = 0
+
+    def fail_second_write(path: Path, *args: object, **kwargs: object) -> int:
+        nonlocal write_count
+        write_count += 1
+        if write_count == 2:
+            raise OSError("injected temp write failure")
+        return original_write_text(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "write_text", fail_second_write)
+
+    with pytest.raises(OSError, match="injected temp write failure"):
+        roadmap.write_roadmap(
+            initial_issues[:5],
+            tmp_path,
+            snapshot_date="2026-07-16",
+            expected_count=5,
+            stage_size=10,
+        )
+
+    after = {path.name: path.read_bytes() for path in tmp_path.iterdir()}
+    assert after == before
+
+
 def test_write_roadmap_rejects_unexpected_issue_count(tmp_path: Path) -> None:
     issues = [make_issue(1, "2026-07-01T00:00:00Z")]
 
@@ -316,6 +487,39 @@ def test_write_roadmap_rejects_unexpected_issue_count(tmp_path: Path) -> None:
             tmp_path,
             snapshot_date="2026-07-15",
             expected_count=160,
+        )
+
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_write_roadmap_rejects_cross_page_duplicates_when_count_matches(
+    tmp_path: Path,
+) -> None:
+    def fake_request(url: str, token: str | None) -> list[dict[str, object]]:
+        del token
+        page = int(parse_qs(urlparse(url).query)["page"][0])
+        pages = {
+            1: [api_issue(3), api_issue(2)],
+            2: [api_issue(2), api_issue(1)],
+            3: [],
+        }
+        return pages[page]
+
+    issues = roadmap.fetch_open_issues(
+        "JefferyHcool/BiliNote",
+        per_page=2,
+        request_json=fake_request,
+    )
+
+    with pytest.raises(
+        RuntimeError, match=r"duplicate issue numbers.*\[2\]"
+    ):
+        roadmap.write_roadmap(
+            issues,
+            tmp_path,
+            snapshot_date="2026-07-15",
+            expected_count=4,
+            stage_size=10,
         )
 
     assert list(tmp_path.iterdir()) == []
