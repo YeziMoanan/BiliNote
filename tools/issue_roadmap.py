@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import math
 from dataclasses import asdict, dataclass
-from typing import Iterable
+from typing import Iterable, Mapping
 
 
 __all__ = [
@@ -28,26 +28,37 @@ class Issue:
     disposition: str = "-"
 
     @classmethod
-    def from_api(cls, item: dict) -> Issue:
+    def from_api(cls, item: Mapping[str, object]) -> Issue:
+        required_text: dict[str, str] = {}
+        for field in ("created_at", "updated_at", "html_url"):
+            value = str(item.get(field) or "").strip()
+            if not value:
+                raise ValueError(f"{field} must be a non-empty value")
+            required_text[field] = value
+
+        raw_labels = item.get("labels")
+        api_labels = raw_labels if isinstance(raw_labels, (list, tuple)) else ()
         labels = tuple(
             name
-            for label in item.get("labels", ())
+            for label in api_labels
+            if isinstance(label, Mapping)
             if (name := str(label.get("name") or "").strip())
         )
-        user = item.get("user") or {}
+        raw_user = item.get("user")
+        user = raw_user if isinstance(raw_user, Mapping) else {}
         author = str(user.get("login") or "unknown").strip() or "unknown"
 
         return cls(
             number=int(item["number"]),
             title=str(item.get("title") or "").strip() or "(untitled)",
-            created_at=str(item.get("created_at") or ""),
-            updated_at=str(item.get("updated_at") or ""),
+            created_at=required_text["created_at"],
+            updated_at=required_text["updated_at"],
             labels=labels,
-            url=str(item.get("html_url") or ""),
+            url=required_text["html_url"],
             author=author,
         )
 
-    def to_json_dict(self) -> dict:
+    def to_json_dict(self) -> dict[str, object]:
         data = asdict(self)
         data["labels"] = list(self.labels)
         return data
@@ -69,12 +80,19 @@ def issue_kind(issue: Issue) -> str:
 
 
 def escape_markdown(value: str) -> str:
-    return " ".join(value.split()).replace("|", r"\|")
+    collapsed = " ".join(value.split())
+    return collapsed.replace("\\", "\\\\").replace("|", r"\|")
+
+
+def _validate_stage_size(stage_size: int) -> None:
+    if stage_size <= 0:
+        raise ValueError("stage_size must be greater than zero")
 
 
 def render_readme(
     issues: list[Issue], snapshot_date: str, *, stage_size: int = 10
 ) -> str:
+    _validate_stage_size(stage_size)
     stage_count = math.ceil(len(issues) / stage_size)
     bugs = sum(issue_kind(issue) == "bug" for issue in issues)
     enhancements = sum(issue_kind(issue) == "enhancement" for issue in issues)
@@ -95,10 +113,16 @@ def render_readme(
 
     for position, issue in enumerate(issues, start=1):
         stage = (position - 1) // stage_size + 1
-        issue_link = f"[#{issue.number}]({issue.url}) {escape_markdown(issue.title)}"
+        issue_link = (
+            f"[#{issue.number}]({escape_markdown(issue.url)}) "
+            f"{escape_markdown(issue.title)}"
+        )
         lines.append(
-            f"| {position} | {stage} | {issue_link} | {issue.created_at[:10]} | "
-            f"{issue_kind(issue)} | `{issue.status}` | {issue.disposition} |"
+            f"| {position} | {stage} | {issue_link} | "
+            f"{escape_markdown(issue.created_at[:10])} | "
+            f"{escape_markdown(issue_kind(issue))} | "
+            f"`{escape_markdown(issue.status)}` | "
+            f"{escape_markdown(issue.disposition)} |"
         )
 
     return "\n".join(lines) + "\n"
@@ -107,6 +131,14 @@ def render_readme(
 def render_stage(
     issues: list[Issue], *, stage: int, stage_size: int = 10
 ) -> str:
+    _validate_stage_size(stage_size)
+    if stage < 1:
+        raise ValueError("stage must be at least 1")
+
+    stage_count = math.ceil(len(issues) / stage_size)
+    if stage > stage_count:
+        raise ValueError(f"stage {stage} exceeds available stages ({stage_count})")
+
     start = (stage - 1) * stage_size
     selected = issues[start : start + stage_size]
     lines = [
@@ -119,10 +151,15 @@ def render_stage(
     ]
 
     for offset, issue in enumerate(selected, start=start + 1):
-        issue_link = f"[#{issue.number}]({issue.url}) {escape_markdown(issue.title)}"
+        issue_link = (
+            f"[#{issue.number}]({escape_markdown(issue.url)}) "
+            f"{escape_markdown(issue.title)}"
+        )
         lines.append(
-            f"| {offset} | {issue_link} | {issue.created_at[:10]} | {issue_kind(issue)} | "
-            f"`{issue.status}` | {issue.disposition} | - | 尚未开始 |"
+            f"| {offset} | {issue_link} | {escape_markdown(issue.created_at[:10])} | "
+            f"{escape_markdown(issue_kind(issue))} | "
+            f"`{escape_markdown(issue.status)}` | "
+            f"{escape_markdown(issue.disposition)} | - | 尚未开始 |"
         )
 
     return "\n".join(lines) + "\n"
