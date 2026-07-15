@@ -238,6 +238,27 @@ def test_fetch_open_issues_paginates_and_filters_pull_requests() -> None:
     assert [issue.number for issue in issues] == [3, 2]
 
 
+def test_fetch_open_issues_stops_when_payload_exceeds_page_size() -> None:
+    request_count = 0
+
+    def fake_request(url: str, token: str | None) -> list[dict[str, object]]:
+        del url, token
+        nonlocal request_count
+        request_count += 1
+        if request_count > 1:
+            raise AssertionError("unexpected additional page request")
+        return [api_issue(1), api_issue(3), api_issue(2)]
+
+    issues = roadmap.fetch_open_issues(
+        "JefferyHcool/BiliNote",
+        per_page=2,
+        request_json=fake_request,
+    )
+
+    assert request_count == 1
+    assert [issue.number for issue in issues] == [3, 2, 1]
+
+
 @pytest.mark.parametrize("repo", ["", "owner", "/repo", "owner/"])
 def test_fetch_open_issues_rejects_invalid_repo(repo: str) -> None:
     with pytest.raises(ValueError, match="owner/name"):

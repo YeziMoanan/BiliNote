@@ -152,7 +152,7 @@ def fetch_open_issues(
             for item in payload
             if "pull_request" not in item
         )
-        if len(payload) < per_page:
+        if len(payload) != per_page:
             break
         page += 1
 
