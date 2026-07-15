@@ -362,6 +362,7 @@ def test_fetch_open_issues_rejects_per_page_outside_github_range(
 def test_write_roadmap_creates_snapshot_readme_and_all_stages(
     tmp_path: Path,
 ) -> None:
+    output_dir = tmp_path / "roadmap"
     issues = ordered_issues(
         [
             make_issue(number, f"2026-07-{number:02d}T00:00:00Z")
@@ -371,20 +372,20 @@ def test_write_roadmap_creates_snapshot_readme_and_all_stages(
 
     roadmap.write_roadmap(
         issues,
-        tmp_path,
+        output_dir,
         snapshot_date="2026-07-15",
         expected_count=11,
         repository="owner/repo",
         stage_size=10,
     )
 
-    assert sorted(path.name for path in tmp_path.iterdir()) == [
+    assert sorted(path.name for path in output_dir.iterdir()) == [
         "README.md",
         "issues-snapshot.json",
         "stage-01.md",
         "stage-02.md",
     ]
-    snapshot_bytes = (tmp_path / "issues-snapshot.json").read_bytes()
+    snapshot_bytes = (output_dir / "issues-snapshot.json").read_bytes()
     assert snapshot_bytes.endswith(b"\n")
     assert not snapshot_bytes.endswith(b"\n\n")
     snapshot = json.loads(snapshot_bytes.decode("utf-8"))
@@ -403,13 +404,15 @@ def test_write_roadmap_creates_snapshot_readme_and_all_stages(
         "status" not in item and "disposition" not in item
         for item in snapshot["issues"]
     )
-    assert (tmp_path / "README.md").read_text(encoding="utf-8") == render_readme(
+    assert (output_dir / "README.md").read_text(
+        encoding="utf-8"
+    ) == render_readme(
         issues, "2026-07-15", repository="owner/repo", stage_size=10
     )
-    assert (tmp_path / "stage-01.md").read_text(
+    assert (output_dir / "stage-01.md").read_text(
         encoding="utf-8"
     ) == render_stage(issues, stage=1, stage_size=10)
-    assert (tmp_path / "stage-02.md").read_text(
+    assert (output_dir / "stage-02.md").read_text(
         encoding="utf-8"
     ) == render_stage(issues, stage=2, stage_size=10)
 
@@ -488,6 +491,158 @@ def test_write_roadmap_temp_failure_preserves_existing_artifacts(
 
     after = {path.name: path.read_bytes() for path in tmp_path.iterdir()}
     assert after == before
+    assert not [
+        path
+        for path in tmp_path.parent.iterdir()
+        if path.name.startswith(f".{tmp_path.name}.")
+    ]
+
+
+def test_write_roadmap_restores_old_generation_when_install_rename_fails(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    output_dir = tmp_path / "roadmap"
+    output_dir.mkdir()
+    old_generation = {
+        "issues-snapshot.json": b'{"generation": "old"}\n',
+        "README.md": b"# Old roadmap\n",
+        "stage-01.md": b"# Old stage\n",
+    }
+    for filename, contents in old_generation.items():
+        (output_dir / filename).write_bytes(contents)
+
+    original_replace = roadmap.os.replace
+    directory_replace_count = 0
+    failed_replace_count: int | None = None
+
+    def fail_second_directory_replace(
+        source: str | Path, destination: str | Path
+    ) -> None:
+        nonlocal directory_replace_count, failed_replace_count
+        if Path(source).is_dir():
+            directory_replace_count += 1
+            if directory_replace_count == 2:
+                failed_replace_count = directory_replace_count
+                raise OSError("injected staging install failure")
+        original_replace(source, destination)
+
+    monkeypatch.setattr(roadmap.os, "replace", fail_second_directory_replace)
+
+    issues = ordered_issues(
+        [
+            make_issue(number, f"2026-07-{number:02d}T00:00:00Z")
+            for number in range(1, 6)
+        ]
+    )
+    with pytest.raises(OSError, match="injected staging install failure"):
+        roadmap.write_roadmap(
+            issues,
+            output_dir,
+            snapshot_date="2026-07-16",
+            expected_count=5,
+            stage_size=10,
+        )
+
+    assert failed_replace_count == 2
+    assert directory_replace_count == 3
+    assert {
+        path.name: path.read_bytes() for path in output_dir.iterdir()
+    } == old_generation
+    assert not [
+        path
+        for path in tmp_path.iterdir()
+        if path.name.startswith(".roadmap.")
+    ]
+
+
+def test_write_roadmap_retains_backup_when_rollback_rename_fails(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    output_dir = tmp_path / "roadmap"
+    output_dir.mkdir()
+    old_generation = {
+        "issues-snapshot.json": b'{"generation": "old"}\n',
+        "README.md": b"# Old roadmap\n",
+        "stage-01.md": b"# Old stage\n",
+    }
+    for filename, contents in old_generation.items():
+        (output_dir / filename).write_bytes(contents)
+
+    original_replace = roadmap.os.replace
+    directory_replace_count = 0
+
+    def fail_install_and_restore(
+        source: str | Path, destination: str | Path
+    ) -> None:
+        nonlocal directory_replace_count
+        if Path(source).is_dir():
+            directory_replace_count += 1
+            if directory_replace_count == 2:
+                output_dir.mkdir()
+                (output_dir / "interloper.txt").write_text(
+                    "concurrent output", encoding="utf-8"
+                )
+                raise OSError("injected staging install failure")
+            if directory_replace_count == 3:
+                raise OSError("injected backup restore failure")
+        original_replace(source, destination)
+
+    monkeypatch.setattr(roadmap.os, "replace", fail_install_and_restore)
+
+    issues = ordered_issues(
+        [
+            make_issue(number, f"2026-07-{number:02d}T00:00:00Z")
+            for number in range(1, 6)
+        ]
+    )
+    with pytest.raises(
+        OSError, match="injected staging install failure"
+    ) as caught:
+        roadmap.write_roadmap(
+            issues,
+            output_dir,
+            snapshot_date="2026-07-16",
+            expected_count=5,
+            stage_size=10,
+        )
+
+    assert directory_replace_count == 3
+    assert any(
+        "injected backup restore failure" in note
+        for note in caught.value.__notes__
+    )
+    assert not list(tmp_path.glob(".roadmap.staging-*"))
+    backups = list(tmp_path.glob(".roadmap.backup-*"))
+    assert len(backups) == 1
+    assert {
+        path.name: path.read_bytes() for path in backups[0].iterdir()
+    } == old_generation
+
+
+def test_write_roadmap_rejects_existing_non_directory_output(
+    tmp_path: Path,
+) -> None:
+    output_path = tmp_path / "roadmap"
+    old_contents = b"not a roadmap directory\n"
+    output_path.write_bytes(old_contents)
+    issues = [make_issue(1, "2026-07-01T00:00:00Z")]
+
+    with pytest.raises(NotADirectoryError, match="not a directory"):
+        roadmap.write_roadmap(
+            issues,
+            output_path,
+            snapshot_date="2026-07-16",
+            expected_count=1,
+        )
+
+    assert output_path.read_bytes() == old_contents
+    assert not [
+        path
+        for path in tmp_path.iterdir()
+        if path.name.startswith(".roadmap.")
+    ]
 
 
 def test_write_roadmap_rejects_unexpected_issue_count(tmp_path: Path) -> None:

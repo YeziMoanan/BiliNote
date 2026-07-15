@@ -530,7 +530,7 @@ Expected: `exported 160 open issues across 16 stages`.
 Run:
 
 ```powershell
-python -c "import json, pathlib; p=pathlib.Path('docs/issue-remediation/issues-snapshot.json'); items=json.loads(p.read_text(encoding='utf-8')); assert len(items)==160; assert items==sorted(items, key=lambda x:(x['created_at'],x['number']), reverse=True); assert [x['number'] for x in items[:10]]==[420,419,417,416,415,404,401,400,395,392]; print('snapshot-ok')"
+python -c "import json, pathlib; p=pathlib.Path('docs/issue-remediation/issues-snapshot.json'); data=json.loads(p.read_text(encoding='utf-8')); assert set(data)=={'schema_version','repository','snapshot_date','ordering','stage_size','issues'}; assert data['schema_version']==1; assert data['repository']=='JefferyHcool/BiliNote'; assert data['snapshot_date']=='2026-07-15'; assert data['ordering']=='created_at desc, number desc'; assert data['stage_size']==10; items=data['issues']; assert len(items)==160; assert items==sorted(items, key=lambda x:(x['created_at'],x['number']), reverse=True); assert [x['number'] for x in items[:10]]==[420,419,417,416,415,404,401,400,395,392]; print('snapshot-ok')"
 ```
 
 Expected: `snapshot-ok`.
@@ -540,7 +540,7 @@ Expected: `snapshot-ok`.
 Run:
 
 ```powershell
-python -c "import pathlib; files=sorted(pathlib.Path('docs/issue-remediation').glob('stage-*.md')); assert len(files)==16; assert all(path.read_text(encoding='utf-8').count('| `queued` |')==10 for path in files); print('stages-ok')"
+python -c "import pathlib; files=sorted(pathlib.Path('docs/issue-remediation').glob('stage-*.md')); required=('工作区：','正文与评论摘要：','当前版本核查：','根因：','修改范围：','复现或核查证据：','分支和提交：','验证命令与结果：','残余风险或解除阻塞条件：'); texts=[path.read_text(encoding='utf-8') for path in files]; assert len(files)==16; assert all(text.count('id='+chr(34)+'issue-')==10 and all(text.count('- '+section)==10 for section in required) for text in texts); print('stages-ok')"
 ```
 
 Expected: `stages-ok`.
@@ -601,7 +601,7 @@ git commit -m "docs: plan issue roadmap bootstrap"
 Run:
 
 ```powershell
-python -c "import json, pathlib; issue=json.loads(pathlib.Path('docs/issue-remediation/issues-snapshot.json').read_text(encoding='utf-8'))[0]; assert issue['number']==420; print(f\"next=#{issue['number']} {issue['title']}\")"
+python -c "import json, pathlib; data=json.loads(pathlib.Path('docs/issue-remediation/issues-snapshot.json').read_text(encoding='utf-8')); issue=data['issues'][0]; assert issue['number']==420; print('next=#{} {}'.format(issue['number'], issue['title']))"
 ```
 
 Expected: `next=#420 [Feature] 希望支持读取 B 站评论区内容并参与视频总结`.

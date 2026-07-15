@@ -4,6 +4,7 @@ import argparse
 import json
 import math
 import os
+import shutil
 import tempfile
 import time
 from dataclasses import dataclass
@@ -377,31 +378,63 @@ def write_roadmap(
             issues, stage=stage, stage_size=stage_size
         )
 
-    output_dir.mkdir(parents=True, exist_ok=True)
-    temp_paths: dict[str, Path] = {}
+    if output_dir.exists() and not output_dir.is_dir():
+        raise NotADirectoryError(
+            f"roadmap output path is not a directory: {output_dir}"
+        )
+
+    output_dir.parent.mkdir(parents=True, exist_ok=True)
+    staging_dir: Path | None = Path(
+        tempfile.mkdtemp(
+            dir=output_dir.parent,
+            prefix=f".{output_dir.name}.staging-",
+        )
+    )
+    backup_dir: Path | None = None
+    remove_backup = False
     try:
         for filename, contents in artifacts.items():
-            descriptor, temp_name = tempfile.mkstemp(
-                dir=output_dir,
-                prefix=f".{filename}.",
-                suffix=".tmp",
-            )
-            os.close(descriptor)
-            temp_path = Path(temp_name)
-            temp_paths[filename] = temp_path
-            temp_path.write_text(
+            (staging_dir / filename).write_text(
                 contents, encoding="utf-8", newline="\n"
             )
 
-        for filename, temp_path in temp_paths.items():
-            os.replace(temp_path, output_dir / filename)
+        if not output_dir.exists():
+            os.replace(staging_dir, output_dir)
+            staging_dir = None
+            return
 
-        for stage_path in output_dir.glob("stage-*.md"):
-            if stage_path.name not in artifacts:
-                stage_path.unlink()
+        backup_dir = Path(
+            tempfile.mkdtemp(
+                dir=output_dir.parent,
+                prefix=f".{output_dir.name}.backup-",
+            )
+        )
+        backup_dir.rmdir()
+        os.replace(output_dir, backup_dir)
+        try:
+            os.replace(staging_dir, output_dir)
+        except BaseException as publication_error:
+            try:
+                os.replace(backup_dir, output_dir)
+            except BaseException as restore_error:
+                publication_error.add_note(
+                    "failed to restore the previous roadmap generation from "
+                    f"{backup_dir}: {restore_error}"
+                )
+            else:
+                backup_dir = None
+            raise
+
+        staging_dir = None
+        remove_backup = True
+        shutil.rmtree(backup_dir, ignore_errors=True)
+        if not backup_dir.exists():
+            backup_dir = None
     finally:
-        for temp_path in temp_paths.values():
-            temp_path.unlink(missing_ok=True)
+        if staging_dir is not None:
+            shutil.rmtree(staging_dir, ignore_errors=True)
+        if backup_dir is not None and remove_backup:
+            shutil.rmtree(backup_dir, ignore_errors=True)
 
 
 def parse_args() -> argparse.Namespace:
