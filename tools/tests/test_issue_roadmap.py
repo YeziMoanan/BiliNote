@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
+from http import client
 from pathlib import Path
 from urllib import error, request
 from urllib.parse import parse_qs, urlparse
@@ -25,8 +27,6 @@ def make_issue(
     *,
     title: str = "Example",
     labels: tuple[str, ...] = (),
-    status: str = "queued",
-    disposition: str = "-",
 ) -> Issue:
     return Issue(
         number=number,
@@ -36,8 +36,6 @@ def make_issue(
         labels=labels,
         url=f"https://github.com/JefferyHcool/BiliNote/issues/{number}",
         author="tester",
-        status=status,
-        disposition=disposition,
     )
 
 
@@ -195,6 +193,7 @@ def test_github_get_json_omits_authorization_without_token(
         error.HTTPError("https://api.github.com", 500, "failed", {}, None),
         error.URLError("failed"),
         TimeoutError("failed"),
+        client.IncompleteRead(b"partial", 10),
     ],
 )
 def test_github_get_json_retries_transient_failures_three_times(
@@ -375,6 +374,7 @@ def test_write_roadmap_creates_snapshot_readme_and_all_stages(
         tmp_path,
         snapshot_date="2026-07-15",
         expected_count=11,
+        repository="owner/repo",
         stage_size=10,
     )
 
@@ -388,9 +388,23 @@ def test_write_roadmap_creates_snapshot_readme_and_all_stages(
     assert snapshot_bytes.endswith(b"\n")
     assert not snapshot_bytes.endswith(b"\n\n")
     snapshot = json.loads(snapshot_bytes.decode("utf-8"))
-    assert [item["number"] for item in snapshot] == list(range(11, 0, -1))
+    assert snapshot == {
+        "schema_version": 1,
+        "repository": "owner/repo",
+        "snapshot_date": "2026-07-15",
+        "ordering": "created_at desc, number desc",
+        "stage_size": 10,
+        "issues": [issue.to_source_dict() for issue in issues],
+    }
+    assert [item["number"] for item in snapshot["issues"]] == list(
+        range(11, 0, -1)
+    )
+    assert all(
+        "status" not in item and "disposition" not in item
+        for item in snapshot["issues"]
+    )
     assert (tmp_path / "README.md").read_text(encoding="utf-8") == render_readme(
-        issues, "2026-07-15", stage_size=10
+        issues, "2026-07-15", repository="owner/repo", stage_size=10
     )
     assert (tmp_path / "stage-01.md").read_text(
         encoding="utf-8"
@@ -571,6 +585,7 @@ def test_main_forwards_environment_token_and_reports_export(
         output_dir: Path,
         snapshot_date: str,
         expected_count: int,
+        repository: str = "JefferyHcool/BiliNote",
         stage_size: int = 10,
     ) -> None:
         calls["write"] = (
@@ -578,6 +593,7 @@ def test_main_forwards_environment_token_and_reports_export(
             output_dir,
             snapshot_date,
             expected_count,
+            repository,
             stage_size,
         )
 
@@ -589,6 +605,8 @@ def test_main_forwards_environment_token_and_reports_export(
         "argv",
         [
             "issue_roadmap.py",
+            "--repo",
+            "owner/repo",
             "--snapshot-date",
             "2026-07-15",
             "--expected-count",
@@ -600,12 +618,13 @@ def test_main_forwards_environment_token_and_reports_export(
 
     roadmap.main()
 
-    assert calls["fetch"] == ("JefferyHcool/BiliNote", "test-token")
+    assert calls["fetch"] == ("owner/repo", "test-token")
     assert calls["write"] == (
         issues,
         tmp_path,
         "2026-07-15",
         11,
+        "owner/repo",
         10,
     )
     assert capsys.readouterr().out == "exported 11 open issues across 2 stages\n"
@@ -640,11 +659,20 @@ def test_render_readme_assigns_ten_issues_per_stage_and_escapes_titles() -> None
 
     assert "共 11 条 open issue，分为 2 个阶段" in rendered
     assert (
-        "[#11](https://github.com/JefferyHcool/BiliNote/issues/11) A \\| B"
+        "| 顺序 | 阶段 | Issue | 标题 | 创建时间 | 工作区 | 类型 | "
+        "当前状态 | 处置 | 详情 |"
+    ) in rendered
+    assert (
+        "[#11](https://github.com/JefferyHcool/BiliNote/issues/11)"
         in rendered
     )
-    assert "| 10 | 1 |" in rendered
-    assert "| 11 | 2 |" in rendered
+    assert "| A \\| B |" in rendered
+    assert "| 10 | [01](stage-01.md) |" in rendered
+    assert "| 11 | [02](stage-02.md) |" in rendered
+    assert "| 未分诊 |" in rendered
+    assert "| `queued` | 未判定 |" in rendered
+    assert "[查看详情](stage-01.md#issue-11)" in rendered
+    assert "[查看详情](stage-02.md#issue-1)" in rendered
 
 
 def test_render_stage_contains_only_requested_stage() -> None:
@@ -657,12 +685,86 @@ def test_render_stage_contains_only_requested_stage() -> None:
     rendered = render_stage(ordered, stage=2, stage_size=10)
 
     assert "# Issue Remediation Stage 02" in rendered
+    assert "[返回总表](README.md)" in rendered
+    assert "| 顺序 | Issue | 标题 | 创建时间 | 类型 |" in rendered
+    assert "| 状态 |" not in rendered
+    assert "| 处置 |" not in rendered
     assert "[#1]" in rendered
     assert "[#2]" not in rendered
-    assert "`queued`" in rendered
+    assert '<a id="issue-1"></a>' in rendered
+    assert '<a id="issue-2"></a>' not in rendered
+    assert "`queued`" not in rendered
+    assert "| 未判定 |" not in rendered
+    assert "- 完成情况：0/1" in rendered
 
 
-def test_issue_from_api_normalizes_metadata_and_json_labels() -> None:
+def test_render_stage_has_ten_audit_ready_anchored_details_and_review() -> None:
+    issues = ordered_issues(
+        [
+            make_issue(number, f"2026-07-{number:02d}T00:00:00Z")
+            for number in range(1, 11)
+        ]
+    )
+
+    rendered = render_stage(issues, stage=1, stage_size=10)
+
+    for issue in issues:
+        assert rendered.count(f'<a id="issue-{issue.number}"></a>') == 1
+    for label in (
+        "工作区",
+        "正文与评论摘要",
+        "当前版本核查",
+        "根因",
+        "修改范围",
+        "复现或核查证据",
+        "分支和提交",
+        "验证命令与结果",
+        "残余风险或解除阻塞条件",
+    ):
+        assert rendered.count(f"- {label}：") == 10
+    assert "## 阶段回顾" in rendered
+    assert "- 阶段状态：尚未开始" in rendered
+    assert "- 完成情况：0/10" in rendered
+    assert "- 阻塞项：尚未评估" in rendered
+    assert "- 回归结果：尚未开始" in rendered
+    assert "TODO" not in rendered
+    assert "TBD" not in rendered
+
+
+def test_readme_canonical_rows_resolve_to_matching_stage_details() -> None:
+    issues = ordered_issues(
+        [
+            make_issue(number, f"2026-07-{number:02d}T00:00:00Z")
+            for number in range(1, 12)
+        ]
+    )
+    readme = render_readme(issues, "2026-07-15", stage_size=10)
+    stages = {
+        f"stage-{stage:02d}.md": render_stage(
+            issues, stage=stage, stage_size=10
+        )
+        for stage in (1, 2)
+    }
+
+    detail_links = re.findall(
+        r"\[查看详情\]\((stage-\d{2}\.md)#(issue-\d+)\)", readme
+    )
+    stage_links = re.findall(r"\[(\d{2})\]\((stage-\d{2}\.md)\)", readme)
+
+    assert len(detail_links) == len(issues)
+    assert len(stage_links) == len(issues)
+    assert readme.count("| 未分诊 |") == len(issues)
+    assert readme.count("| `queued` | 未判定 |") == len(issues)
+    for filename, anchor in detail_links:
+        assert filename in stages
+        assert f'<a id="{anchor}"></a>' in stages[filename]
+    for stage_number, filename in stage_links:
+        assert filename == f"stage-{stage_number}.md"
+    assert all("`queued`" not in stage for stage in stages.values())
+    assert all("| 处置 |" not in stage for stage in stages.values())
+
+
+def test_issue_from_api_normalizes_and_serializes_source_metadata() -> None:
     item = make_api_item()
     item["title"] = "   "
     item["user"] = None
@@ -678,7 +780,7 @@ def test_issue_from_api_normalizes_metadata_and_json_labels() -> None:
         url="https://github.com/JefferyHcool/BiliNote/issues/42",
         author="unknown",
     )
-    assert issue.to_json_dict() == {
+    assert issue.to_source_dict() == {
         "number": 42,
         "title": "(untitled)",
         "created_at": "2026-07-01T00:00:00Z",
@@ -686,9 +788,9 @@ def test_issue_from_api_normalizes_metadata_and_json_labels() -> None:
         "labels": ["bug"],
         "url": "https://github.com/JefferyHcool/BiliNote/issues/42",
         "author": "unknown",
-        "status": "queued",
-        "disposition": "-",
     }
+    assert not hasattr(issue, "status")
+    assert not hasattr(issue, "disposition")
 
 
 @pytest.mark.parametrize(
@@ -740,23 +842,15 @@ def test_renderers_escape_all_dynamic_table_cells() -> None:
         "2026-07-01T00:00:00Z",
         title=r"Title\|pipe",
         labels=(r"Custom\|Label",),
-        status="queued | blocked",
-        disposition=r"owner\|review",
     )
 
     readme = render_readme([issue], "2026-07-15")
     stage = render_stage([issue], stage=1)
 
-    assert (
-        r"| 1 | 1 | [#1](https://github.com/JefferyHcool/BiliNote/issues/1) "
-        r"Title\\\|pipe | 2026-07-01 | custom\\\|label | `queued \| blocked` | "
-        r"owner\\\|review |"
-    ) in readme
-    assert (
-        r"| 1 | [#1](https://github.com/JefferyHcool/BiliNote/issues/1) "
-        r"Title\\\|pipe | 2026-07-01 | custom\\\|label | `queued \| blocked` | "
-        r"owner\\\|review | - | 尚未开始 |"
-    ) in stage
+    assert r"| Title\\\|pipe |" in readme
+    assert r"| custom\\\|label |" in readme
+    assert r"| Title\\\|pipe |" in stage
+    assert r"| custom\\\|label |" in stage
 
 
 @pytest.mark.parametrize("stage_size", [0, -1])

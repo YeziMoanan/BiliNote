@@ -6,7 +6,8 @@ import math
 import os
 import tempfile
 import time
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
+from http import client
 from pathlib import Path
 from typing import Callable, Iterable, Mapping
 from urllib import error, parse, request
@@ -40,8 +41,6 @@ class Issue:
     labels: tuple[str, ...]
     url: str
     author: str
-    status: str = "queued"
-    disposition: str = "-"
 
     @classmethod
     def from_api(cls, item: Mapping[str, object]) -> Issue:
@@ -74,10 +73,16 @@ class Issue:
             author=author,
         )
 
-    def to_json_dict(self) -> dict[str, object]:
-        data = asdict(self)
-        data["labels"] = list(self.labels)
-        return data
+    def to_source_dict(self) -> dict[str, object]:
+        return {
+            "number": self.number,
+            "title": self.title,
+            "created_at": self.created_at,
+            "updated_at": self.updated_at,
+            "labels": list(self.labels),
+            "url": self.url,
+            "author": self.author,
+        }
 
 
 def ordered_issues(issues: Iterable[Issue]) -> list[Issue]:
@@ -113,7 +118,12 @@ def github_get_json(
                 )
             with request.urlopen(api_request, timeout=30) as response:
                 payload = json.loads(response.read().decode("utf-8"))
-        except (error.HTTPError, error.URLError, TimeoutError) as exc:
+        except (
+            client.IncompleteRead,
+            error.HTTPError,
+            error.URLError,
+            TimeoutError,
+        ) as exc:
             if attempt == 2:
                 raise RuntimeError(
                     "GitHub issue request failed after 3 attempts: "
@@ -204,7 +214,11 @@ def _validate_stage_size(stage_size: int) -> None:
 
 
 def render_readme(
-    issues: list[Issue], snapshot_date: str, *, stage_size: int = 10
+    issues: list[Issue],
+    snapshot_date: str,
+    *,
+    repository: str = "JefferyHcool/BiliNote",
+    stage_size: int = 10,
 ) -> str:
     _validate_stage_size(stage_size)
     stage_count = math.ceil(len(issues) / stage_size)
@@ -214,29 +228,31 @@ def render_readme(
     lines = [
         "# Issue Remediation Ledger",
         "",
-        f"> Snapshot: {snapshot_date}. Source: `JefferyHcool/BiliNote`.",
+        f"> Snapshot: {snapshot_date}. Source: `{repository}`.",
         "",
         f"共 {len(issues)} 条 open issue，分为 {stage_count} 个阶段。",
         f"分类：bug {bugs} 条，enhancement {enhancements} 条，其他或未分类 {unclassified} 条。",
         "",
         "排序规则：`created_at` 降序；创建时间相同时按 issue 编号降序。",
         "",
-        "| 顺序 | 阶段 | Issue | 创建时间 | 类型 | 状态 | 处置 |",
-        "| ---: | ---: | --- | --- | --- | --- | --- |",
+        "| 顺序 | 阶段 | Issue | 标题 | 创建时间 | 工作区 | 类型 | 当前状态 | 处置 | 详情 |",
+        "| ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
 
     for position, issue in enumerate(issues, start=1):
         stage = (position - 1) // stage_size + 1
-        issue_link = (
-            f"[#{issue.number}]({escape_markdown(issue.url)}) "
-            f"{escape_markdown(issue.title)}"
+        stage_filename = f"stage-{stage:02d}.md"
+        stage_link = f"[{stage:02d}]({stage_filename})"
+        issue_link = f"[#{issue.number}]({escape_markdown(issue.url)})"
+        detail_link = (
+            f"[查看详情]({stage_filename}#issue-{issue.number})"
         )
         lines.append(
-            f"| {position} | {stage} | {issue_link} | "
-            f"{escape_markdown(issue.created_at[:10])} | "
-            f"{escape_markdown(issue_kind(issue))} | "
-            f"`{escape_markdown(issue.status)}` | "
-            f"{escape_markdown(issue.disposition)} |"
+            f"| {position} | {stage_link} | {issue_link} | "
+            f"{escape_markdown(issue.title)} | "
+            f"{escape_markdown(issue.created_at[:10])} | 未分诊 | "
+            f"{escape_markdown(issue_kind(issue))} | `queued` | "
+            f"未判定 | {detail_link} |"
         )
 
     return "\n".join(lines) + "\n"
@@ -258,23 +274,52 @@ def render_stage(
     lines = [
         f"# Issue Remediation Stage {stage:02d}",
         "",
+        "[返回总表](README.md)",
+        "",
         f"范围：全量时间序中的第 {start + 1}-{start + len(selected)} 条。",
         "",
-        "| 顺序 | Issue | 创建时间 | 类型 | 状态 | 处置 | 分支/提交 | 验证 |",
-        "| ---: | --- | --- | --- | --- | --- | --- | --- |",
+        "| 顺序 | Issue | 标题 | 创建时间 | 类型 |",
+        "| ---: | --- | --- | --- | --- |",
     ]
 
     for offset, issue in enumerate(selected, start=start + 1):
-        issue_link = (
-            f"[#{issue.number}]({escape_markdown(issue.url)}) "
-            f"{escape_markdown(issue.title)}"
-        )
+        issue_link = f"[#{issue.number}]({escape_markdown(issue.url)})"
         lines.append(
-            f"| {offset} | {issue_link} | {escape_markdown(issue.created_at[:10])} | "
-            f"{escape_markdown(issue_kind(issue))} | "
-            f"`{escape_markdown(issue.status)}` | "
-            f"{escape_markdown(issue.disposition)} | - | 尚未开始 |"
+            f"| {offset} | {issue_link} | {escape_markdown(issue.title)} | "
+            f"{escape_markdown(issue.created_at[:10])} | "
+            f"{escape_markdown(issue_kind(issue))} |"
         )
+
+    for issue in selected:
+        lines.extend(
+            [
+                "",
+                f'<a id="issue-{issue.number}"></a>',
+                f"## Issue #{issue.number}",
+                "",
+                "- 工作区：未分诊",
+                "- 正文与评论摘要：尚未开始",
+                "- 当前版本核查：尚未开始",
+                "- 根因：尚未判定",
+                "- 修改范围：尚未评估",
+                "- 复现或核查证据：尚未开始",
+                "- 分支和提交：尚未开始",
+                "- 验证命令与结果：尚未开始",
+                "- 残余风险或解除阻塞条件：尚未评估",
+            ]
+        )
+
+    lines.extend(
+        [
+            "",
+            "## 阶段回顾",
+            "",
+            "- 阶段状态：尚未开始",
+            f"- 完成情况：0/{len(selected)}",
+            "- 阻塞项：尚未评估",
+            "- 回归结果：尚未开始",
+        ]
+    )
 
     return "\n".join(lines) + "\n"
 
@@ -284,6 +329,7 @@ def write_roadmap(
     output_dir: Path,
     snapshot_date: str,
     expected_count: int,
+    repository: str = "JefferyHcool/BiliNote",
     stage_size: int = 10,
 ) -> None:
     _validate_stage_size(stage_size)
@@ -305,14 +351,24 @@ def write_roadmap(
         )
 
     snapshot = json.dumps(
-        [issue.to_json_dict() for issue in issues],
+        {
+            "schema_version": 1,
+            "repository": repository,
+            "snapshot_date": snapshot_date,
+            "ordering": "created_at desc, number desc",
+            "stage_size": stage_size,
+            "issues": [issue.to_source_dict() for issue in issues],
+        },
         ensure_ascii=False,
         indent=2,
     )
     artifacts = {
         "issues-snapshot.json": snapshot + "\n",
         "README.md": render_readme(
-            issues, snapshot_date, stage_size=stage_size
+            issues,
+            snapshot_date,
+            repository=repository,
+            stage_size=stage_size,
         ),
     }
     stage_count = math.ceil(len(issues) / stage_size)
@@ -368,6 +424,7 @@ def main() -> None:
         args.output_dir,
         snapshot_date=args.snapshot_date,
         expected_count=args.expected_count,
+        repository=args.repo,
         stage_size=args.stage_size,
     )
     stage_count = math.ceil(len(issues) / args.stage_size)

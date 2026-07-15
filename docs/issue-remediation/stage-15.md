@@ -1,16 +1,155 @@
 # Issue Remediation Stage 15
 
+[返回总表](README.md)
+
 范围：全量时间序中的第 141-150 条。
 
-| 顺序 | Issue | 创建时间 | 类型 | 状态 | 处置 | 分支/提交 | 验证 |
-| ---: | --- | --- | --- | --- | --- | --- | --- |
-| 141 | [#112](https://github.com/JefferyHcool/BiliNote/issues/112) [FEATHURE] 是否考虑增加API接口或者MCP接口支持接入智能体 | 2025-05-18 | enhancement | `queued` | - | - | 尚未开始 |
-| 142 | [#111](https://github.com/JefferyHcool/BiliNote/issues/111) [FEATHURE] 支持用户登录 | 2025-05-18 | enhancement | `queued` | - | - | 尚未开始 |
-| 143 | [#110](https://github.com/JefferyHcool/BiliNote/issues/110) [FEATHURE] 自定义prompt功能。 | 2025-05-18 | enhancement | `queued` | - | - | 尚未开始 |
-| 144 | [#107](https://github.com/JefferyHcool/BiliNote/issues/107) 在线体验网址（https://www.bilinote.app/）无法生成笔记 | 2025-05-14 | unlabeled | `queued` | - | - | 尚未开始 |
-| 145 | [#105](https://github.com/JefferyHcool/BiliNote/issues/105) [BUG] | 2025-05-13 | bug | `queued` | - | - | 尚未开始 |
-| 146 | [#86](https://github.com/JefferyHcool/BiliNote/issues/86) [FEATHURE] 数据处理分阶段设定特定api接口 | 2025-05-08 | enhancement | `queued` | - | - | 尚未开始 |
-| 147 | [#85](https://github.com/JefferyHcool/BiliNote/issues/85) [FEATHURE] 定时任务列表 功能 | 2025-05-08 | enhancement | `queued` | - | - | 尚未开始 |
-| 148 | [#76](https://github.com/JefferyHcool/BiliNote/issues/76) [BUG] | 2025-05-05 | bug | `queued` | - | - | 尚未开始 |
-| 149 | [#70](https://github.com/JefferyHcool/BiliNote/issues/70) [BUG]Unprocessable Entity | 2025-05-02 | bug | `queued` | - | - | 尚未开始 |
-| 150 | [#69](https://github.com/JefferyHcool/BiliNote/issues/69) [BUG] | 2025-05-02 | bug | `queued` | - | - | 尚未开始 |
+| 顺序 | Issue | 标题 | 创建时间 | 类型 |
+| ---: | --- | --- | --- | --- |
+| 141 | [#112](https://github.com/JefferyHcool/BiliNote/issues/112) | [FEATHURE] 是否考虑增加API接口或者MCP接口支持接入智能体 | 2025-05-18 | enhancement |
+| 142 | [#111](https://github.com/JefferyHcool/BiliNote/issues/111) | [FEATHURE] 支持用户登录 | 2025-05-18 | enhancement |
+| 143 | [#110](https://github.com/JefferyHcool/BiliNote/issues/110) | [FEATHURE] 自定义prompt功能。 | 2025-05-18 | enhancement |
+| 144 | [#107](https://github.com/JefferyHcool/BiliNote/issues/107) | 在线体验网址（https://www.bilinote.app/）无法生成笔记 | 2025-05-14 | unlabeled |
+| 145 | [#105](https://github.com/JefferyHcool/BiliNote/issues/105) | [BUG] | 2025-05-13 | bug |
+| 146 | [#86](https://github.com/JefferyHcool/BiliNote/issues/86) | [FEATHURE] 数据处理分阶段设定特定api接口 | 2025-05-08 | enhancement |
+| 147 | [#85](https://github.com/JefferyHcool/BiliNote/issues/85) | [FEATHURE] 定时任务列表 功能 | 2025-05-08 | enhancement |
+| 148 | [#76](https://github.com/JefferyHcool/BiliNote/issues/76) | [BUG] | 2025-05-05 | bug |
+| 149 | [#70](https://github.com/JefferyHcool/BiliNote/issues/70) | [BUG]Unprocessable Entity | 2025-05-02 | bug |
+| 150 | [#69](https://github.com/JefferyHcool/BiliNote/issues/69) | [BUG] | 2025-05-02 | bug |
+
+<a id="issue-112"></a>
+## Issue #112
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-111"></a>
+## Issue #111
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-110"></a>
+## Issue #110
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-107"></a>
+## Issue #107
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-105"></a>
+## Issue #105
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-86"></a>
+## Issue #86
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-85"></a>
+## Issue #85
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-76"></a>
+## Issue #76
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-70"></a>
+## Issue #70
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-69"></a>
+## Issue #69
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+## 阶段回顾
+
+- 阶段状态：尚未开始
+- 完成情况：0/10
+- 阻塞项：尚未评估
+- 回归结果：尚未开始

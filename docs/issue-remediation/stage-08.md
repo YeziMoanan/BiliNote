@@ -1,16 +1,155 @@
 # Issue Remediation Stage 08
 
+[返回总表](README.md)
+
 范围：全量时间序中的第 71-80 条。
 
-| 顺序 | Issue | 创建时间 | 类型 | 状态 | 处置 | 分支/提交 | 验证 |
-| ---: | --- | --- | --- | --- | --- | --- | --- |
-| 71 | [#236](https://github.com/JefferyHcool/BiliNote/issues/236) [求助]确认使用VL相关模型（Qwen/Qwen2.5-VL-72B-Instruct），无法生成带原片截图的笔记（7分钟以下的视频没问题）。 | 2025-10-04 | bug | `queued` | - | - | 尚未开始 |
-| 72 | [#235](https://github.com/JefferyHcool/BiliNote/issues/235) [BUG]windows用exe安装的，报后台错误怎么查看日志？ | 2025-10-04 | bug | `queued` | - | - | 尚未开始 |
-| 73 | [#234](https://github.com/JefferyHcool/BiliNote/issues/234) [FEATHURE]希望能添加文字稿转笔记功能 | 2025-10-02 | enhancement | `queued` | - | - | 尚未开始 |
-| 74 | [#233](https://github.com/JefferyHcool/BiliNote/issues/233) [BUG]跳转哔哩哔哩的多P视频时，链接存在问题，需要把如_pN改为?p=N才能正确跳转 | 2025-10-02 | bug | `queued` | - | - | 尚未开始 |
-| 75 | [#231](https://github.com/JefferyHcool/BiliNote/issues/231) [BUG]bug实在太多了，完全用不了 | 2025-10-01 | bug | `queued` | - | - | 尚未开始 |
-| 76 | [#230](https://github.com/JefferyHcool/BiliNote/issues/230) [FEATHURE] 希望能增加本地视频文件上传和做笔记 | 2025-09-28 | enhancement | `queued` | - | - | 尚未开始 |
-| 77 | [#229](https://github.com/JefferyHcool/BiliNote/issues/229) 启动不起来 | 2025-09-28 | unlabeled | `queued` | - | - | 尚未开始 |
-| 78 | [#228](https://github.com/JefferyHcool/BiliNote/issues/228) [BUG] | 2025-09-27 | bug | `queued` | - | - | 尚未开始 |
-| 79 | [#227](https://github.com/JefferyHcool/BiliNote/issues/227) [BUG] | 2025-09-27 | bug | `queued` | - | - | 尚未开始 |
-| 80 | [#226](https://github.com/JefferyHcool/BiliNote/issues/226) [BUG] | 2025-09-26 | bug | `queued` | - | - | 尚未开始 |
+| 顺序 | Issue | 标题 | 创建时间 | 类型 |
+| ---: | --- | --- | --- | --- |
+| 71 | [#236](https://github.com/JefferyHcool/BiliNote/issues/236) | [求助]确认使用VL相关模型（Qwen/Qwen2.5-VL-72B-Instruct），无法生成带原片截图的笔记（7分钟以下的视频没问题）。 | 2025-10-04 | bug |
+| 72 | [#235](https://github.com/JefferyHcool/BiliNote/issues/235) | [BUG]windows用exe安装的，报后台错误怎么查看日志？ | 2025-10-04 | bug |
+| 73 | [#234](https://github.com/JefferyHcool/BiliNote/issues/234) | [FEATHURE]希望能添加文字稿转笔记功能 | 2025-10-02 | enhancement |
+| 74 | [#233](https://github.com/JefferyHcool/BiliNote/issues/233) | [BUG]跳转哔哩哔哩的多P视频时，链接存在问题，需要把如_pN改为?p=N才能正确跳转 | 2025-10-02 | bug |
+| 75 | [#231](https://github.com/JefferyHcool/BiliNote/issues/231) | [BUG]bug实在太多了，完全用不了 | 2025-10-01 | bug |
+| 76 | [#230](https://github.com/JefferyHcool/BiliNote/issues/230) | [FEATHURE] 希望能增加本地视频文件上传和做笔记 | 2025-09-28 | enhancement |
+| 77 | [#229](https://github.com/JefferyHcool/BiliNote/issues/229) | 启动不起来 | 2025-09-28 | unlabeled |
+| 78 | [#228](https://github.com/JefferyHcool/BiliNote/issues/228) | [BUG] | 2025-09-27 | bug |
+| 79 | [#227](https://github.com/JefferyHcool/BiliNote/issues/227) | [BUG] | 2025-09-27 | bug |
+| 80 | [#226](https://github.com/JefferyHcool/BiliNote/issues/226) | [BUG] | 2025-09-26 | bug |
+
+<a id="issue-236"></a>
+## Issue #236
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-235"></a>
+## Issue #235
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-234"></a>
+## Issue #234
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-233"></a>
+## Issue #233
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-231"></a>
+## Issue #231
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-230"></a>
+## Issue #230
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-229"></a>
+## Issue #229
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-228"></a>
+## Issue #228
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-227"></a>
+## Issue #227
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-226"></a>
+## Issue #226
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+## 阶段回顾
+
+- 阶段状态：尚未开始
+- 完成情况：0/10
+- 阻塞项：尚未评估
+- 回归结果：尚未开始

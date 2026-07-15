@@ -1,16 +1,155 @@
 # Issue Remediation Stage 04
 
+[返回总表](README.md)
+
 范围：全量时间序中的第 31-40 条。
 
-| 顺序 | Issue | 创建时间 | 类型 | 状态 | 处置 | 分支/提交 | 验证 |
-| ---: | --- | --- | --- | --- | --- | --- | --- |
-| 31 | [#314](https://github.com/JefferyHcool/BiliNote/issues/314) [BUG] Youtube 报错 | 2026-03-31 | bug | `queued` | - | - | 尚未开始 |
-| 32 | [#313](https://github.com/JefferyHcool/BiliNote/issues/313) docker时发现没有BiliNote的镜像，是最近在打包更新嘛？ | 2026-03-26 | unlabeled | `queued` | - | - | 尚未开始 |
-| 33 | [#296](https://github.com/JefferyHcool/BiliNote/issues/296) error originates | 2026-03-22 | unlabeled | `queued` | - | - | 尚未开始 |
-| 34 | [#294](https://github.com/JefferyHcool/BiliNote/issues/294) [BUG] | 2026-03-14 | bug | `queued` | - | - | 尚未开始 |
-| 35 | [#292](https://github.com/JefferyHcool/BiliNote/issues/292) [BUG]网页版能调用cuda加速 windou客户端不可以 | 2026-03-04 | bug | `queued` | - | - | 尚未开始 |
-| 36 | [#291](https://github.com/JefferyHcool/BiliNote/issues/291) [BUG]即使环境支持，依然未调用CUDA加速 | 2026-03-03 | bug | `queued` | - | - | 尚未开始 |
-| 37 | [#289](https://github.com/JefferyHcool/BiliNote/issues/289) [BUG]下载失败引发程序崩溃：网络异常处理逻辑存在严重缺陷 (ConnectionReset & HTTP 412) | 2026-03-03 | bug | `queued` | - | - | 尚未开始 |
-| 38 | [#288](https://github.com/JefferyHcool/BiliNote/issues/288) [FEATHURE] 期待开放agent SKILL相关的版本 | 2026-03-02 | enhancement | `queued` | - | - | 尚未开始 |
-| 39 | [#287](https://github.com/JefferyHcool/BiliNote/issues/287) [FEATHURE]两个小需求 | 2026-03-02 | enhancement | `queued` | - | - | 尚未开始 |
-| 40 | [#286](https://github.com/JefferyHcool/BiliNote/issues/286) [BUG]模型的开关在UI上有问题 | 2026-03-02 | bug | `queued` | - | - | 尚未开始 |
+| 顺序 | Issue | 标题 | 创建时间 | 类型 |
+| ---: | --- | --- | --- | --- |
+| 31 | [#314](https://github.com/JefferyHcool/BiliNote/issues/314) | [BUG] Youtube 报错 | 2026-03-31 | bug |
+| 32 | [#313](https://github.com/JefferyHcool/BiliNote/issues/313) | docker时发现没有BiliNote的镜像，是最近在打包更新嘛？ | 2026-03-26 | unlabeled |
+| 33 | [#296](https://github.com/JefferyHcool/BiliNote/issues/296) | error originates | 2026-03-22 | unlabeled |
+| 34 | [#294](https://github.com/JefferyHcool/BiliNote/issues/294) | [BUG] | 2026-03-14 | bug |
+| 35 | [#292](https://github.com/JefferyHcool/BiliNote/issues/292) | [BUG]网页版能调用cuda加速 windou客户端不可以 | 2026-03-04 | bug |
+| 36 | [#291](https://github.com/JefferyHcool/BiliNote/issues/291) | [BUG]即使环境支持，依然未调用CUDA加速 | 2026-03-03 | bug |
+| 37 | [#289](https://github.com/JefferyHcool/BiliNote/issues/289) | [BUG]下载失败引发程序崩溃：网络异常处理逻辑存在严重缺陷 (ConnectionReset & HTTP 412) | 2026-03-03 | bug |
+| 38 | [#288](https://github.com/JefferyHcool/BiliNote/issues/288) | [FEATHURE] 期待开放agent SKILL相关的版本 | 2026-03-02 | enhancement |
+| 39 | [#287](https://github.com/JefferyHcool/BiliNote/issues/287) | [FEATHURE]两个小需求 | 2026-03-02 | enhancement |
+| 40 | [#286](https://github.com/JefferyHcool/BiliNote/issues/286) | [BUG]模型的开关在UI上有问题 | 2026-03-02 | bug |
+
+<a id="issue-314"></a>
+## Issue #314
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-313"></a>
+## Issue #313
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-296"></a>
+## Issue #296
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-294"></a>
+## Issue #294
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-292"></a>
+## Issue #292
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-291"></a>
+## Issue #291
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-289"></a>
+## Issue #289
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-288"></a>
+## Issue #288
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-287"></a>
+## Issue #287
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-286"></a>
+## Issue #286
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+## 阶段回顾
+
+- 阶段状态：尚未开始
+- 完成情况：0/10
+- 阻塞项：尚未评估
+- 回归结果：尚未开始

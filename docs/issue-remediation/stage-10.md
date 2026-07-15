@@ -1,16 +1,155 @@
 # Issue Remediation Stage 10
 
+[返回总表](README.md)
+
 范围：全量时间序中的第 91-100 条。
 
-| 顺序 | Issue | 创建时间 | 类型 | 状态 | 处置 | 分支/提交 | 验证 |
-| ---: | --- | --- | --- | --- | --- | --- | --- |
-| 91 | [#213](https://github.com/JefferyHcool/BiliNote/issues/213) 软件停止维护了吗？ | 2025-08-13 | enhancement | `queued` | - | - | 尚未开始 |
-| 92 | [#212](https://github.com/JefferyHcool/BiliNote/issues/212) docker部署一直无法正常加载图片 | 2025-08-11 | bug | `queued` | - | - | 尚未开始 |
-| 93 | [#211](https://github.com/JefferyHcool/BiliNote/issues/211) [BUG]本地上传视频无法使用 | 2025-08-11 | bug | `queued` | - | - | 尚未开始 |
-| 94 | [#209](https://github.com/JefferyHcool/BiliNote/issues/209) [BUG]Windows本地安装了FFmpeg并成功运行该软件几次后，又重新报错未安装FFmpeg以及报错[Errno 22] Invalid argument | 2025-08-09 | bug | `queued` | - | - | 尚未开始 |
-| 95 | [#208](https://github.com/JefferyHcool/BiliNote/issues/208) 关于截图机制 | 2025-08-06 | unlabeled | `queued` | - | - | 尚未开始 |
-| 96 | [#207](https://github.com/JefferyHcool/BiliNote/issues/207) [FEATHURE]不使用openai的接口获取大模型列表 | 2025-08-06 | enhancement | `queued` | - | - | 尚未开始 |
-| 97 | [#206](https://github.com/JefferyHcool/BiliNote/issues/206) [BUG]本地多核cpu无法全部使用，只能用4核 | 2025-08-06 | bug | `queued` | - | - | 尚未开始 |
-| 98 | [#205](https://github.com/JefferyHcool/BiliNote/issues/205) [FEATHURE]在大模型调用速率过高时自动重试 | 2025-08-06 | enhancement | `queued` | - | - | 尚未开始 |
-| 99 | [#203](https://github.com/JefferyHcool/BiliNote/issues/203) [BUG] Win打包版本1.8.1 无法使用 | 2025-08-02 | bug | `queued` | - | - | 尚未开始 |
-| 100 | [#202](https://github.com/JefferyHcool/BiliNote/issues/202) [FEATHURE] 小宇宙的播客链接有可能支持吗 | 2025-07-30 | enhancement | `queued` | - | - | 尚未开始 |
+| 顺序 | Issue | 标题 | 创建时间 | 类型 |
+| ---: | --- | --- | --- | --- |
+| 91 | [#213](https://github.com/JefferyHcool/BiliNote/issues/213) | 软件停止维护了吗？ | 2025-08-13 | enhancement |
+| 92 | [#212](https://github.com/JefferyHcool/BiliNote/issues/212) | docker部署一直无法正常加载图片 | 2025-08-11 | bug |
+| 93 | [#211](https://github.com/JefferyHcool/BiliNote/issues/211) | [BUG]本地上传视频无法使用 | 2025-08-11 | bug |
+| 94 | [#209](https://github.com/JefferyHcool/BiliNote/issues/209) | [BUG]Windows本地安装了FFmpeg并成功运行该软件几次后，又重新报错未安装FFmpeg以及报错[Errno 22] Invalid argument | 2025-08-09 | bug |
+| 95 | [#208](https://github.com/JefferyHcool/BiliNote/issues/208) | 关于截图机制 | 2025-08-06 | unlabeled |
+| 96 | [#207](https://github.com/JefferyHcool/BiliNote/issues/207) | [FEATHURE]不使用openai的接口获取大模型列表 | 2025-08-06 | enhancement |
+| 97 | [#206](https://github.com/JefferyHcool/BiliNote/issues/206) | [BUG]本地多核cpu无法全部使用，只能用4核 | 2025-08-06 | bug |
+| 98 | [#205](https://github.com/JefferyHcool/BiliNote/issues/205) | [FEATHURE]在大模型调用速率过高时自动重试 | 2025-08-06 | enhancement |
+| 99 | [#203](https://github.com/JefferyHcool/BiliNote/issues/203) | [BUG] Win打包版本1.8.1 无法使用 | 2025-08-02 | bug |
+| 100 | [#202](https://github.com/JefferyHcool/BiliNote/issues/202) | [FEATHURE] 小宇宙的播客链接有可能支持吗 | 2025-07-30 | enhancement |
+
+<a id="issue-213"></a>
+## Issue #213
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-212"></a>
+## Issue #212
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-211"></a>
+## Issue #211
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-209"></a>
+## Issue #209
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-208"></a>
+## Issue #208
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-207"></a>
+## Issue #207
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-206"></a>
+## Issue #206
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-205"></a>
+## Issue #205
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-203"></a>
+## Issue #203
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-202"></a>
+## Issue #202
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+## 阶段回顾
+
+- 阶段状态：尚未开始
+- 完成情况：0/10
+- 阻塞项：尚未评估
+- 回归结果：尚未开始

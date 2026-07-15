@@ -1,16 +1,155 @@
 # Issue Remediation Stage 16
 
+[返回总表](README.md)
+
 范围：全量时间序中的第 151-160 条。
 
-| 顺序 | Issue | 创建时间 | 类型 | 状态 | 处置 | 分支/提交 | 验证 |
-| ---: | --- | --- | --- | --- | --- | --- | --- |
-| 151 | [#64](https://github.com/JefferyHcool/BiliNote/issues/64) [BUG] Docker 安装出错 | 2025-05-02 | bug | `queued` | - | - | 尚未开始 |
-| 152 | [#59](https://github.com/JefferyHcool/BiliNote/issues/59) [BUG] docker-compose启动时前端项目报: /start.sh: not found | 2025-04-29 | bug | `queued` | - | - | 尚未开始 |
-| 153 | [#52](https://github.com/JefferyHcool/BiliNote/issues/52) 提示未安装torch，无法调用cuda | 2025-04-27 | unlabeled | `queued` | - | - | 尚未开始 |
-| 154 | [#39](https://github.com/JefferyHcool/BiliNote/issues/39) Frontend 错误 | 2025-04-25 | unlabeled | `queued` | - | - | 尚未开始 |
-| 155 | [#38](https://github.com/JefferyHcool/BiliNote/issues/38) Markdown格式问题 | 2025-04-25 | unlabeled | `queued` | - | - | 尚未开始 |
-| 156 | [#34](https://github.com/JefferyHcool/BiliNote/issues/34) 在debian10系统安装报错 | 2025-04-24 | unlabeled | `queued` | - | - | 尚未开始 |
-| 157 | [#33](https://github.com/JefferyHcool/BiliNote/issues/33) [enhancement]建议添加一个批量生成的功能 | 2025-04-23 | unlabeled | `queued` | - | - | 尚未开始 |
-| 158 | [#28](https://github.com/JefferyHcool/BiliNote/issues/28) [Feature]请问预计什么时候会出mac版的呢？ | 2025-04-19 | unlabeled | `queued` | - | - | 尚未开始 |
-| 159 | [#25](https://github.com/JefferyHcool/BiliNote/issues/25) [Feature]适配流式输出模型 | 2025-04-18 | unlabeled | `queued` | - | - | 尚未开始 |
-| 160 | [#20](https://github.com/JefferyHcool/BiliNote/issues/20) Windows打包版本双击运行无法启动，闪退，win11 | 2025-04-17 | unlabeled | `queued` | - | - | 尚未开始 |
+| 顺序 | Issue | 标题 | 创建时间 | 类型 |
+| ---: | --- | --- | --- | --- |
+| 151 | [#64](https://github.com/JefferyHcool/BiliNote/issues/64) | [BUG] Docker 安装出错 | 2025-05-02 | bug |
+| 152 | [#59](https://github.com/JefferyHcool/BiliNote/issues/59) | [BUG] docker-compose启动时前端项目报: /start.sh: not found | 2025-04-29 | bug |
+| 153 | [#52](https://github.com/JefferyHcool/BiliNote/issues/52) | 提示未安装torch，无法调用cuda | 2025-04-27 | unlabeled |
+| 154 | [#39](https://github.com/JefferyHcool/BiliNote/issues/39) | Frontend 错误 | 2025-04-25 | unlabeled |
+| 155 | [#38](https://github.com/JefferyHcool/BiliNote/issues/38) | Markdown格式问题 | 2025-04-25 | unlabeled |
+| 156 | [#34](https://github.com/JefferyHcool/BiliNote/issues/34) | 在debian10系统安装报错 | 2025-04-24 | unlabeled |
+| 157 | [#33](https://github.com/JefferyHcool/BiliNote/issues/33) | [enhancement]建议添加一个批量生成的功能 | 2025-04-23 | unlabeled |
+| 158 | [#28](https://github.com/JefferyHcool/BiliNote/issues/28) | [Feature]请问预计什么时候会出mac版的呢？ | 2025-04-19 | unlabeled |
+| 159 | [#25](https://github.com/JefferyHcool/BiliNote/issues/25) | [Feature]适配流式输出模型 | 2025-04-18 | unlabeled |
+| 160 | [#20](https://github.com/JefferyHcool/BiliNote/issues/20) | Windows打包版本双击运行无法启动，闪退，win11 | 2025-04-17 | unlabeled |
+
+<a id="issue-64"></a>
+## Issue #64
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-59"></a>
+## Issue #59
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-52"></a>
+## Issue #52
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-39"></a>
+## Issue #39
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-38"></a>
+## Issue #38
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-34"></a>
+## Issue #34
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-33"></a>
+## Issue #33
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-28"></a>
+## Issue #28
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-25"></a>
+## Issue #25
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-20"></a>
+## Issue #20
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+## 阶段回顾
+
+- 阶段状态：尚未开始
+- 完成情况：0/10
+- 阻塞项：尚未评估
+- 回归结果：尚未开始

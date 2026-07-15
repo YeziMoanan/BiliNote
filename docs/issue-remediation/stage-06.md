@@ -1,16 +1,155 @@
 # Issue Remediation Stage 06
 
+[返回总表](README.md)
+
 范围：全量时间序中的第 51-60 条。
 
-| 顺序 | Issue | 创建时间 | 类型 | 状态 | 处置 | 分支/提交 | 验证 |
-| ---: | --- | --- | --- | --- | --- | --- | --- |
-| 51 | [#263](https://github.com/JefferyHcool/BiliNote/issues/263) [BUG] 笔记数量达到80个后会生成失败 | 2026-01-15 | bug | `queued` | - | - | 尚未开始 |
-| 52 | [#260](https://github.com/JefferyHcool/BiliNote/issues/260) [BUG]找到路径也会说没找到文件 | 2026-01-03 | bug | `queued` | - | - | 尚未开始 |
-| 53 | [#258](https://github.com/JefferyHcool/BiliNote/issues/258) [BUG] windows下1.8.1 版本不知道是否cuda起作用？ | 2025-12-27 | bug | `queued` | - | - | 尚未开始 |
-| 54 | [#257](https://github.com/JefferyHcool/BiliNote/issues/257) [BUG] | 2025-12-27 | bug | `queued` | - | - | 尚未开始 |
-| 55 | [#256](https://github.com/JefferyHcool/BiliNote/issues/256) [FEATHURE]希望可以导出转写原文 | 2025-12-18 | enhancement | `queued` | - | - | 尚未开始 |
-| 56 | [#255](https://github.com/JefferyHcool/BiliNote/issues/255) [FEATHURE]增加下载代理配置功能 | 2025-12-12 | enhancement | `queued` | - | - | 尚未开始 |
-| 57 | [#254](https://github.com/JefferyHcool/BiliNote/issues/254) [BUG]bilibili视频解析失败 | 2025-12-08 | bug | `queued` | - | - | 尚未开始 |
-| 58 | [#253](https://github.com/JefferyHcool/BiliNote/issues/253) [BUG] | 2025-12-02 | bug | `queued` | - | - | 尚未开始 |
-| 59 | [#252](https://github.com/JefferyHcool/BiliNote/issues/252) 笔记生成失败 | 2025-12-02 | unlabeled | `queued` | - | - | 尚未开始 |
-| 60 | [#251](https://github.com/JefferyHcool/BiliNote/issues/251) Q群已满，需要验证进入，微信群扫描显示过期 | 2025-11-30 | unlabeled | `queued` | - | - | 尚未开始 |
+| 顺序 | Issue | 标题 | 创建时间 | 类型 |
+| ---: | --- | --- | --- | --- |
+| 51 | [#263](https://github.com/JefferyHcool/BiliNote/issues/263) | [BUG] 笔记数量达到80个后会生成失败 | 2026-01-15 | bug |
+| 52 | [#260](https://github.com/JefferyHcool/BiliNote/issues/260) | [BUG]找到路径也会说没找到文件 | 2026-01-03 | bug |
+| 53 | [#258](https://github.com/JefferyHcool/BiliNote/issues/258) | [BUG] windows下1.8.1 版本不知道是否cuda起作用？ | 2025-12-27 | bug |
+| 54 | [#257](https://github.com/JefferyHcool/BiliNote/issues/257) | [BUG] | 2025-12-27 | bug |
+| 55 | [#256](https://github.com/JefferyHcool/BiliNote/issues/256) | [FEATHURE]希望可以导出转写原文 | 2025-12-18 | enhancement |
+| 56 | [#255](https://github.com/JefferyHcool/BiliNote/issues/255) | [FEATHURE]增加下载代理配置功能 | 2025-12-12 | enhancement |
+| 57 | [#254](https://github.com/JefferyHcool/BiliNote/issues/254) | [BUG]bilibili视频解析失败 | 2025-12-08 | bug |
+| 58 | [#253](https://github.com/JefferyHcool/BiliNote/issues/253) | [BUG] | 2025-12-02 | bug |
+| 59 | [#252](https://github.com/JefferyHcool/BiliNote/issues/252) | 笔记生成失败 | 2025-12-02 | unlabeled |
+| 60 | [#251](https://github.com/JefferyHcool/BiliNote/issues/251) | Q群已满，需要验证进入，微信群扫描显示过期 | 2025-11-30 | unlabeled |
+
+<a id="issue-263"></a>
+## Issue #263
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-260"></a>
+## Issue #260
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-258"></a>
+## Issue #258
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-257"></a>
+## Issue #257
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-256"></a>
+## Issue #256
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-255"></a>
+## Issue #255
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-254"></a>
+## Issue #254
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-253"></a>
+## Issue #253
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-252"></a>
+## Issue #252
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-251"></a>
+## Issue #251
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+## 阶段回顾
+
+- 阶段状态：尚未开始
+- 完成情况：0/10
+- 阻塞项：尚未评估
+- 回归结果：尚未开始

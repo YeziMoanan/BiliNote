@@ -1,16 +1,155 @@
 # Issue Remediation Stage 05
 
+[返回总表](README.md)
+
 范围：全量时间序中的第 41-50 条。
 
-| 顺序 | Issue | 创建时间 | 类型 | 状态 | 处置 | 分支/提交 | 验证 |
-| ---: | --- | --- | --- | --- | --- | --- | --- |
-| 41 | [#285](https://github.com/JefferyHcool/BiliNote/issues/285) [BUG] install error with docker compose | 2026-02-28 | bug | `queued` | - | - | 尚未开始 |
-| 42 | [#281](https://github.com/JefferyHcool/BiliNote/issues/281) [BUG]无法稳定连接api | 2026-02-17 | bug | `queued` | - | - | 尚未开始 |
-| 43 | [#280](https://github.com/JefferyHcool/BiliNote/issues/280) [FEATHURE]添加推荐的py解释器版本 | 2026-02-15 | enhancement | `queued` | - | - | 尚未开始 |
-| 44 | [#277](https://github.com/JefferyHcool/BiliNote/issues/277) [FEATHURE]添加爬取评论区内容 | 2026-02-07 | enhancement | `queued` | - | - | 尚未开始 |
-| 45 | [#272](https://github.com/JefferyHcool/BiliNote/issues/272) [FEATHURE] 这项目还有大神继续维护吗 | 2026-02-05 | enhancement | `queued` | - | - | 尚未开始 |
-| 46 | [#270](https://github.com/JefferyHcool/BiliNote/issues/270) [BUG]Mac26.2 无法打开软件 | 2026-01-31 | bug | `queued` | - | - | 尚未开始 |
-| 47 | [#267](https://github.com/JefferyHcool/BiliNote/issues/267) 网盘打包下载的 点开了就闪退怎么回事 没有中文路径 | 2026-01-19 | unlabeled | `queued` | - | - | 尚未开始 |
-| 48 | [#266](https://github.com/JefferyHcool/BiliNote/issues/266) [BUG]时长几十分钟的视频，笔记生成失败 | 2026-01-19 | bug | `queued` | - | - | 尚未开始 |
-| 49 | [#265](https://github.com/JefferyHcool/BiliNote/issues/265) [BUG] | 2026-01-18 | bug | `queued` | - | - | 尚未开始 |
-| 50 | [#264](https://github.com/JefferyHcool/BiliNote/issues/264) [BUG]笔记生成失败 | 2026-01-16 | bug | `queued` | - | - | 尚未开始 |
+| 顺序 | Issue | 标题 | 创建时间 | 类型 |
+| ---: | --- | --- | --- | --- |
+| 41 | [#285](https://github.com/JefferyHcool/BiliNote/issues/285) | [BUG] install error with docker compose | 2026-02-28 | bug |
+| 42 | [#281](https://github.com/JefferyHcool/BiliNote/issues/281) | [BUG]无法稳定连接api | 2026-02-17 | bug |
+| 43 | [#280](https://github.com/JefferyHcool/BiliNote/issues/280) | [FEATHURE]添加推荐的py解释器版本 | 2026-02-15 | enhancement |
+| 44 | [#277](https://github.com/JefferyHcool/BiliNote/issues/277) | [FEATHURE]添加爬取评论区内容 | 2026-02-07 | enhancement |
+| 45 | [#272](https://github.com/JefferyHcool/BiliNote/issues/272) | [FEATHURE] 这项目还有大神继续维护吗 | 2026-02-05 | enhancement |
+| 46 | [#270](https://github.com/JefferyHcool/BiliNote/issues/270) | [BUG]Mac26.2 无法打开软件 | 2026-01-31 | bug |
+| 47 | [#267](https://github.com/JefferyHcool/BiliNote/issues/267) | 网盘打包下载的 点开了就闪退怎么回事 没有中文路径 | 2026-01-19 | unlabeled |
+| 48 | [#266](https://github.com/JefferyHcool/BiliNote/issues/266) | [BUG]时长几十分钟的视频，笔记生成失败 | 2026-01-19 | bug |
+| 49 | [#265](https://github.com/JefferyHcool/BiliNote/issues/265) | [BUG] | 2026-01-18 | bug |
+| 50 | [#264](https://github.com/JefferyHcool/BiliNote/issues/264) | [BUG]笔记生成失败 | 2026-01-16 | bug |
+
+<a id="issue-285"></a>
+## Issue #285
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-281"></a>
+## Issue #281
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-280"></a>
+## Issue #280
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-277"></a>
+## Issue #277
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-272"></a>
+## Issue #272
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-270"></a>
+## Issue #270
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-267"></a>
+## Issue #267
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-266"></a>
+## Issue #266
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-265"></a>
+## Issue #265
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-264"></a>
+## Issue #264
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+## 阶段回顾
+
+- 阶段状态：尚未开始
+- 完成情况：0/10
+- 阻塞项：尚未评估
+- 回归结果：尚未开始

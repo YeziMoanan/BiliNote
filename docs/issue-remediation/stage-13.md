@@ -1,16 +1,155 @@
 # Issue Remediation Stage 13
 
+[返回总表](README.md)
+
 范围：全量时间序中的第 121-130 条。
 
-| 顺序 | Issue | 创建时间 | 类型 | 状态 | 处置 | 分支/提交 | 验证 |
-| ---: | --- | --- | --- | --- | --- | --- | --- |
-| 121 | [#163](https://github.com/JefferyHcool/BiliNote/issues/163) 无法正常添加其他模型提供商 | 2025-06-23 | bug | `queued` | - | - | 尚未开始 |
-| 122 | [#162](https://github.com/JefferyHcool/BiliNote/issues/162) [BUG]抖音的链接无法生成总结 | 2025-06-23 | bug | `queued` | - | - | 尚未开始 |
-| 123 | [#161](https://github.com/JefferyHcool/BiliNote/issues/161) [BUG]影片擷取,Gemini Api連接問題 | 2025-06-23 | bug | `queued` | - | - | 尚未开始 |
-| 124 | [#157](https://github.com/JefferyHcool/BiliNote/issues/157) [BUG]部屬OLLAMA的QWEN3 但是在後台一直不能調用 | 2025-06-22 | bug | `queued` | - | - | 尚未开始 |
-| 125 | [#156](https://github.com/JefferyHcool/BiliNote/issues/156) [BUG]最新版本改到大动脉了吧 | 2025-06-22 | bug | `queued` | - | - | 尚未开始 |
-| 126 | [#155](https://github.com/JefferyHcool/BiliNote/issues/155) [BUG]mac 进不去 | 2025-06-22 | bug | `queued` | - | - | 尚未开始 |
-| 127 | [#145](https://github.com/JefferyHcool/BiliNote/issues/145) [BUG]服务器错误，请稍后再试 | 2025-06-19 | bug | `queued` | - | - | 尚未开始 |
-| 128 | [#139](https://github.com/JefferyHcool/BiliNote/issues/139) [BUG]为什么不能上传本地视频 | 2025-06-19 | bug | `queued` | - | - | 尚未开始 |
-| 129 | [#138](https://github.com/JefferyHcool/BiliNote/issues/138) [BUG]前端没有生成笔记选项 | 2025-06-19 | bug | `queued` | - | - | 尚未开始 |
-| 130 | [#137](https://github.com/JefferyHcool/BiliNote/issues/137) [BUG] | 2025-06-18 | bug | `queued` | - | - | 尚未开始 |
+| 顺序 | Issue | 标题 | 创建时间 | 类型 |
+| ---: | --- | --- | --- | --- |
+| 121 | [#163](https://github.com/JefferyHcool/BiliNote/issues/163) | 无法正常添加其他模型提供商 | 2025-06-23 | bug |
+| 122 | [#162](https://github.com/JefferyHcool/BiliNote/issues/162) | [BUG]抖音的链接无法生成总结 | 2025-06-23 | bug |
+| 123 | [#161](https://github.com/JefferyHcool/BiliNote/issues/161) | [BUG]影片擷取,Gemini Api連接問題 | 2025-06-23 | bug |
+| 124 | [#157](https://github.com/JefferyHcool/BiliNote/issues/157) | [BUG]部屬OLLAMA的QWEN3 但是在後台一直不能調用 | 2025-06-22 | bug |
+| 125 | [#156](https://github.com/JefferyHcool/BiliNote/issues/156) | [BUG]最新版本改到大动脉了吧 | 2025-06-22 | bug |
+| 126 | [#155](https://github.com/JefferyHcool/BiliNote/issues/155) | [BUG]mac 进不去 | 2025-06-22 | bug |
+| 127 | [#145](https://github.com/JefferyHcool/BiliNote/issues/145) | [BUG]服务器错误，请稍后再试 | 2025-06-19 | bug |
+| 128 | [#139](https://github.com/JefferyHcool/BiliNote/issues/139) | [BUG]为什么不能上传本地视频 | 2025-06-19 | bug |
+| 129 | [#138](https://github.com/JefferyHcool/BiliNote/issues/138) | [BUG]前端没有生成笔记选项 | 2025-06-19 | bug |
+| 130 | [#137](https://github.com/JefferyHcool/BiliNote/issues/137) | [BUG] | 2025-06-18 | bug |
+
+<a id="issue-163"></a>
+## Issue #163
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-162"></a>
+## Issue #162
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-161"></a>
+## Issue #161
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-157"></a>
+## Issue #157
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-156"></a>
+## Issue #156
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-155"></a>
+## Issue #155
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-145"></a>
+## Issue #145
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-139"></a>
+## Issue #139
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-138"></a>
+## Issue #138
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+<a id="issue-137"></a>
+## Issue #137
+
+- 工作区：未分诊
+- 正文与评论摘要：尚未开始
+- 当前版本核查：尚未开始
+- 根因：尚未判定
+- 修改范围：尚未评估
+- 复现或核查证据：尚未开始
+- 分支和提交：尚未开始
+- 验证命令与结果：尚未开始
+- 残余风险或解除阻塞条件：尚未评估
+
+## 阶段回顾
+
+- 阶段状态：尚未开始
+- 完成情况：0/10
+- 阻塞项：尚未评估
+- 回归结果：尚未开始
