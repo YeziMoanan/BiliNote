@@ -4,7 +4,9 @@ import argparse
 import json
 import math
 import os
+import re
 import shutil
+import stat
 import tempfile
 import time
 from dataclasses import dataclass
@@ -31,6 +33,9 @@ __all__ = [
 
 
 JsonRequest = Callable[[str, str | None], list[Mapping[str, object]]]
+
+_MANAGED_ROADMAP_FILENAMES = {"README.md", "issues-snapshot.json"}
+_STAGE_FILENAME = re.compile(r"stage-\d{2}\.md", flags=re.ASCII)
 
 
 @dataclass(frozen=True)
@@ -382,6 +387,33 @@ def write_roadmap(
         raise NotADirectoryError(
             f"roadmap output path is not a directory: {output_dir}"
         )
+    if output_dir.exists():
+        unmanaged_entries: list[str] = []
+        for entry in output_dir.iterdir():
+            entry_stat = entry.stat(follow_symlinks=False)
+            file_attributes = getattr(entry_stat, "st_file_attributes", 0)
+            is_reparse_point = bool(
+                file_attributes
+                & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0)
+            )
+            has_managed_name = (
+                entry.name in _MANAGED_ROADMAP_FILENAMES
+                or _STAGE_FILENAME.fullmatch(entry.name) is not None
+            )
+            if (
+                not has_managed_name
+                or not stat.S_ISREG(entry_stat.st_mode)
+                or is_reparse_point
+            ):
+                unmanaged_entries.append(entry.name)
+        if unmanaged_entries:
+            formatted_entries = ", ".join(
+                repr(name) for name in sorted(unmanaged_entries)
+            )
+            raise RuntimeError(
+                "roadmap publication refused; unmanaged output entries: "
+                f"{formatted_entries}"
+            )
 
     output_dir.parent.mkdir(parents=True, exist_ok=True)
     staging_dir: Path | None = Path(

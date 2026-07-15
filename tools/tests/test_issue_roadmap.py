@@ -51,6 +51,15 @@ def make_api_item() -> dict[str, object]:
     }
 
 
+def directory_snapshot(root: Path) -> dict[str, bytes | None]:
+    return {
+        path.relative_to(root).as_posix(): (
+            None if path.is_dir() else path.read_bytes()
+        )
+        for path in root.rglob("*")
+    }
+
+
 def api_issue(number: int, pull_request: bool = False) -> dict[str, object]:
     item: dict[str, object] = {
         "number": number,
@@ -448,6 +457,96 @@ def test_write_roadmap_removes_obsolete_stage_files_on_rerun(
         "issues-snapshot.json",
         "stage-01.md",
     ]
+
+
+def test_write_roadmap_refuses_output_with_unmanaged_file(
+    tmp_path: Path,
+) -> None:
+    output_dir = tmp_path / "roadmap"
+    output_dir.mkdir()
+    existing_files = {
+        "README.md": b"# Existing roadmap\n",
+        "issues-snapshot.json": b'{"generation": "old"}\n',
+        "stage-01.md": b"# Existing stage\n",
+        "unrelated.txt": b"must survive\n",
+    }
+    for filename, contents in existing_files.items():
+        (output_dir / filename).write_bytes(contents)
+    before = directory_snapshot(output_dir)
+
+    with pytest.raises(
+        RuntimeError,
+        match=r"publication refused.*unrelated\.txt",
+    ):
+        roadmap.write_roadmap(
+            [make_issue(1, "2026-07-01T00:00:00Z")],
+            output_dir,
+            snapshot_date="2026-07-16",
+            expected_count=1,
+        )
+
+    assert directory_snapshot(output_dir) == before
+    assert not list(tmp_path.glob(".roadmap.*"))
+
+
+def test_write_roadmap_refuses_managed_name_that_is_a_directory(
+    tmp_path: Path,
+) -> None:
+    output_dir = tmp_path / "roadmap"
+    output_dir.mkdir()
+    (output_dir / "README.md").write_bytes(b"# Existing roadmap\n")
+    (output_dir / "issues-snapshot.json").write_bytes(
+        b'{"generation": "old"}\n'
+    )
+    unrelated_dir = output_dir / "stage-42.md"
+    unrelated_dir.mkdir()
+    (unrelated_dir / "sentinel.txt").write_bytes(b"must survive\n")
+    before = directory_snapshot(output_dir)
+
+    with pytest.raises(
+        RuntimeError,
+        match=r"publication refused.*stage-42\.md",
+    ):
+        roadmap.write_roadmap(
+            [make_issue(1, "2026-07-01T00:00:00Z")],
+            output_dir,
+            snapshot_date="2026-07-16",
+            expected_count=1,
+        )
+
+    assert directory_snapshot(output_dir) == before
+    assert not list(tmp_path.glob(".roadmap.*"))
+
+
+def test_write_roadmap_replaces_valid_managed_set_with_stale_stage(
+    tmp_path: Path,
+) -> None:
+    output_dir = tmp_path / "roadmap"
+    output_dir.mkdir()
+    (output_dir / "README.md").write_bytes(b"# Existing roadmap\n")
+    (output_dir / "issues-snapshot.json").write_bytes(
+        b'{"generation": "old"}\n'
+    )
+    (output_dir / "stage-01.md").write_bytes(b"# Existing stage\n")
+    (output_dir / "stage-99.md").write_bytes(b"# Stale managed stage\n")
+
+    issue = make_issue(1, "2026-07-01T00:00:00Z")
+    roadmap.write_roadmap(
+        [issue],
+        output_dir,
+        snapshot_date="2026-07-16",
+        expected_count=1,
+    )
+
+    assert sorted(path.name for path in output_dir.iterdir()) == [
+        "README.md",
+        "issues-snapshot.json",
+        "stage-01.md",
+    ]
+    assert (output_dir / "stage-01.md").read_text(
+        encoding="utf-8"
+    ) == render_stage([issue], stage=1)
+    assert not list(tmp_path.glob(".roadmap.*"))
 
 
 def test_write_roadmap_temp_failure_preserves_existing_artifacts(
