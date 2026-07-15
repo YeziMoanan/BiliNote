@@ -1,0 +1,2038 @@
+[
+  {
+    "number": 420,
+    "title": "[Feature] 希望支持读取 B 站评论区内容并参与视频总结",
+    "created_at": "2026-07-04T08:47:03Z",
+    "updated_at": "2026-07-04T08:47:03Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/420",
+    "author": "ssatan34",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 419,
+    "title": "[Feature]",
+    "created_at": "2026-07-02T07:44:30Z",
+    "updated_at": "2026-07-02T07:44:30Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/419",
+    "author": "yeqkalx",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 417,
+    "title": "[Bug]  Docker 部署：DeepSeek 模型列表为空 & whisper 模型下载失败",
+    "created_at": "2026-06-27T03:10:59Z",
+    "updated_at": "2026-06-27T03:10:59Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/417",
+    "author": "hyglgithub",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 416,
+    "title": "加个钉钉的直播回放笔记",
+    "created_at": "2026-06-27T02:31:38Z",
+    "updated_at": "2026-06-27T02:31:38Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/416",
+    "author": "17873696205",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 415,
+    "title": "[Bug] 桌面端启动报错后端",
+    "created_at": "2026-06-25T08:21:42Z",
+    "updated_at": "2026-06-25T08:21:42Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/415",
+    "author": "cxrich",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 404,
+    "title": "[Bug] 打开桌面客户端之后，显示后端进程已退出，退出码：1",
+    "created_at": "2026-06-11T18:02:52Z",
+    "updated_at": "2026-06-29T07:29:47Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/404",
+    "author": "Jason-Git-1012",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 401,
+    "title": "[Bug] Firefox 无法安装 .xpi 扩展插件",
+    "created_at": "2026-06-11T09:19:14Z",
+    "updated_at": "2026-06-11T09:19:14Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/401",
+    "author": "RRadon086",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 400,
+    "title": "[Feature] 请问神一样的作者，能不能加一个自定义音频识别ai的选项，自己加一些音频识别的大模型呢？",
+    "created_at": "2026-06-11T04:55:38Z",
+    "updated_at": "2026-06-11T04:55:38Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/400",
+    "author": "cn35-byte",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 395,
+    "title": "[Bug]  requests 2.32.3 can leak netrc credentials via URL userinfo",
+    "created_at": "2026-06-04T01:06:07Z",
+    "updated_at": "2026-06-04T01:06:07Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/395",
+    "author": "hamizan-azman",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 392,
+    "title": "[Bug] Python关联的Mac什么版本的",
+    "created_at": "2026-06-02T07:41:16Z",
+    "updated_at": "2026-06-02T07:41:16Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/392",
+    "author": "ikelvinwoo",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 391,
+    "title": "[Feature] 希望早点加入暗黑模式，太亮了 伤眼",
+    "created_at": "2026-06-01T08:24:59Z",
+    "updated_at": "2026-06-01T08:24:59Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/391",
+    "author": "cn35-byte",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 388,
+    "title": "[Bug] “BiliNote.app”已损坏，无法打开。 你应该将它移到废纸篓。",
+    "created_at": "2026-05-29T02:26:03Z",
+    "updated_at": "2026-07-07T19:09:57Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/388",
+    "author": "chenchenchentebiehao",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 370,
+    "title": "[Feature] 是否可以加入小红书的视频",
+    "created_at": "2026-05-18T07:37:28Z",
+    "updated_at": "2026-05-18T07:37:28Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/370",
+    "author": "zlw1225",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 367,
+    "title": "[Bug] fUqXC1LbBtQ: Requested format is not available. Use --list-formats for a list of available formats",
+    "created_at": "2026-05-13T06:57:55Z",
+    "updated_at": "2026-05-14T04:27:54Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/367",
+    "author": "iockx",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 339,
+    "title": "[FEATHURE]希望加入对flv格式的支持",
+    "created_at": "2026-05-04T08:52:06Z",
+    "updated_at": "2026-05-04T08:52:06Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/339",
+    "author": "pptext",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 338,
+    "title": "[BUG]内容总结崩溃 但是文件生成了",
+    "created_at": "2026-05-03T08:22:54Z",
+    "updated_at": "2026-05-03T08:22:54Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/338",
+    "author": "kajv26193-code",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 337,
+    "title": "[BUG]即使认证了也pull不下来最新2.0镜像，自己编译问题又是一堆",
+    "created_at": "2026-05-02T15:04:37Z",
+    "updated_at": "2026-05-14T01:39:06Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/337",
+    "author": "Sharle-sys",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 335,
+    "title": "[BUG] exe运行版有问题，2.0源码运行也一堆问题，CUDA问题、什么鬼什么鬼问题，整疯了",
+    "created_at": "2026-05-01T15:51:17Z",
+    "updated_at": "2026-06-28T15:33:05Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/335",
+    "author": "xxxdbb110",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 330,
+    "title": "fix: B 站下载 412 错误 + 日志丢失 + 状态文件竞态",
+    "created_at": "2026-04-28T09:07:22Z",
+    "updated_at": "2026-04-28T09:17:56Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/330",
+    "author": "iorireal",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 329,
+    "title": "[BUG]抖音cookie配置问题（已解决）",
+    "created_at": "2026-04-28T06:49:08Z",
+    "updated_at": "2026-07-07T18:46:58Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/329",
+    "author": "zuifanqumingzi",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 328,
+    "title": "项目无法运行",
+    "created_at": "2026-04-28T00:49:59Z",
+    "updated_at": "2026-04-28T00:49:59Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/328",
+    "author": "linzijianxmu-ops",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 325,
+    "title": "windows上跑起来了",
+    "created_at": "2026-04-24T14:49:46Z",
+    "updated_at": "2026-05-13T17:03:56Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/325",
+    "author": "missinglost91",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 324,
+    "title": "[BUG]重启电脑后，无法使用",
+    "created_at": "2026-04-24T08:52:29Z",
+    "updated_at": "2026-04-28T02:39:53Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/324",
+    "author": "13599435613",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 323,
+    "title": "[FEATHURE] 本地跑起来了",
+    "created_at": "2026-04-17T15:20:19Z",
+    "updated_at": "2026-05-06T03:12:48Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/323",
+    "author": "qbmiller",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 322,
+    "title": "[BUG]2.0版本docker编译前端缺失文件/BillNote_frontend/pnpm-lock.yaml\": not found，忽略报错编译成功后api无法调用",
+    "created_at": "2026-04-16T13:02:21Z",
+    "updated_at": "2026-04-16T13:02:21Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/322",
+    "author": "Sharle-sys",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 321,
+    "title": "[BUG]内容总结失败，提示llm请求体中出现不期望的image_url字段",
+    "created_at": "2026-04-14T12:09:57Z",
+    "updated_at": "2026-04-14T12:09:57Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/321",
+    "author": "Roy2029",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 320,
+    "title": "[BUG] windows打包版，生成笔记失败，后端报错500",
+    "created_at": "2026-04-13T18:57:52Z",
+    "updated_at": "2026-04-24T08:41:08Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/320",
+    "author": "wangjiachong",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 317,
+    "title": "ffmpeg",
+    "created_at": "2026-04-04T14:17:13Z",
+    "updated_at": "2026-04-12T08:16:33Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/317",
+    "author": "lzylzy1216-gif",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 316,
+    "title": "[FEATHURE]增加qwen-asr识别选项",
+    "created_at": "2026-04-04T02:03:22Z",
+    "updated_at": "2026-04-04T02:03:40Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/316",
+    "author": "nasa565",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 315,
+    "title": "[BUG]连通性没有问题，笔记生成失败",
+    "created_at": "2026-04-02T00:50:04Z",
+    "updated_at": "2026-04-02T00:50:04Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/315",
+    "author": "shawxgf",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 314,
+    "title": "[BUG] Youtube 报错",
+    "created_at": "2026-03-31T11:06:00Z",
+    "updated_at": "2026-05-13T06:58:41Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/314",
+    "author": "zhanghuiecho",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 313,
+    "title": "docker时发现没有BiliNote的镜像，是最近在打包更新嘛？",
+    "created_at": "2026-03-26T15:31:53Z",
+    "updated_at": "2026-07-08T05:38:23Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/313",
+    "author": "Dingge23",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 296,
+    "title": "error originates",
+    "created_at": "2026-03-22T12:45:23Z",
+    "updated_at": "2026-03-22T12:45:23Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/296",
+    "author": "wqbcs",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 294,
+    "title": "[BUG]",
+    "created_at": "2026-03-14T06:49:53Z",
+    "updated_at": "2026-03-14T06:49:53Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/294",
+    "author": "9527sky",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 292,
+    "title": "[BUG]网页版能调用cuda加速 windou客户端不可以",
+    "created_at": "2026-03-04T15:18:15Z",
+    "updated_at": "2026-06-04T18:26:02Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/292",
+    "author": "ludo9249",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 291,
+    "title": "[BUG]即使环境支持，依然未调用CUDA加速",
+    "created_at": "2026-03-03T05:24:37Z",
+    "updated_at": "2026-03-06T11:30:39Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/291",
+    "author": "asuraberserker",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 289,
+    "title": "[BUG]下载失败引发程序崩溃：网络异常处理逻辑存在严重缺陷 (ConnectionReset & HTTP 412)",
+    "created_at": "2026-03-03T02:03:05Z",
+    "updated_at": "2026-04-27T15:41:01Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/289",
+    "author": "txyyt",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 288,
+    "title": "[FEATHURE] 期待开放agent  SKILL相关的版本",
+    "created_at": "2026-03-02T08:12:27Z",
+    "updated_at": "2026-03-02T08:13:19Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/288",
+    "author": "qrsssh",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 287,
+    "title": "[FEATHURE]两个小需求",
+    "created_at": "2026-03-02T07:25:41Z",
+    "updated_at": "2026-03-03T03:49:28Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/287",
+    "author": "asuraberserker",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 286,
+    "title": "[BUG]模型的开关在UI上有问题",
+    "created_at": "2026-03-02T07:23:41Z",
+    "updated_at": "2026-03-02T07:23:41Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/286",
+    "author": "asuraberserker",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 285,
+    "title": "[BUG] install error with docker compose",
+    "created_at": "2026-02-28T15:03:46Z",
+    "updated_at": "2026-02-28T15:03:46Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/285",
+    "author": "rayinfinite",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 281,
+    "title": "[BUG]无法稳定连接api",
+    "created_at": "2026-02-17T21:05:18Z",
+    "updated_at": "2026-04-26T05:21:53Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/281",
+    "author": "hoshimi-noki",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 280,
+    "title": "[FEATHURE]添加推荐的py解释器版本",
+    "created_at": "2026-02-15T17:56:39Z",
+    "updated_at": "2026-02-15T17:56:39Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/280",
+    "author": "Sjshi763",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 277,
+    "title": "[FEATHURE]添加爬取评论区内容",
+    "created_at": "2026-02-07T11:27:09Z",
+    "updated_at": "2026-02-07T11:27:09Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/277",
+    "author": "LightingEffect",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 272,
+    "title": "[FEATHURE] 这项目还有大神继续维护吗",
+    "created_at": "2026-02-05T09:22:24Z",
+    "updated_at": "2026-03-09T08:38:59Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/272",
+    "author": "pacemrc",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 270,
+    "title": "[BUG]Mac26.2 无法打开软件",
+    "created_at": "2026-01-31T09:37:06Z",
+    "updated_at": "2026-02-03T06:00:27Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/270",
+    "author": "daliang1215",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 267,
+    "title": "网盘打包下载的 点开了就闪退怎么回事 没有中文路径",
+    "created_at": "2026-01-19T12:53:49Z",
+    "updated_at": "2026-01-19T12:53:49Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/267",
+    "author": "511token",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 266,
+    "title": "[BUG]时长几十分钟的视频，笔记生成失败",
+    "created_at": "2026-01-19T09:31:59Z",
+    "updated_at": "2026-02-10T04:58:09Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/266",
+    "author": "cen798",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 265,
+    "title": "[BUG]",
+    "created_at": "2026-01-18T14:29:25Z",
+    "updated_at": "2026-01-18T14:29:25Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/265",
+    "author": "SanwenYu007",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 264,
+    "title": "[BUG]笔记生成失败",
+    "created_at": "2026-01-16T08:30:30Z",
+    "updated_at": "2026-01-16T08:30:30Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/264",
+    "author": "moqiloveboa",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 263,
+    "title": "[BUG] 笔记数量达到80个后会生成失败",
+    "created_at": "2026-01-15T07:49:42Z",
+    "updated_at": "2026-01-15T07:49:42Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/263",
+    "author": "DoubleBobCat",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 260,
+    "title": "[BUG]找到路径也会说没找到文件",
+    "created_at": "2026-01-03T06:41:59Z",
+    "updated_at": "2026-02-16T06:32:24Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/260",
+    "author": "Sjshi763",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 258,
+    "title": "[BUG] windows下1.8.1 版本不知道是否cuda起作用？",
+    "created_at": "2025-12-27T14:33:22Z",
+    "updated_at": "2025-12-27T14:33:22Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/258",
+    "author": "zhangfanpc",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 257,
+    "title": "[BUG]",
+    "created_at": "2025-12-27T04:03:42Z",
+    "updated_at": "2025-12-27T04:03:42Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/257",
+    "author": "461723091",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 256,
+    "title": "[FEATHURE]希望可以导出转写原文",
+    "created_at": "2025-12-18T10:11:18Z",
+    "updated_at": "2025-12-18T10:11:18Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/256",
+    "author": "heyhenryz",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 255,
+    "title": "[FEATHURE]增加下载代理配置功能",
+    "created_at": "2025-12-12T13:44:09Z",
+    "updated_at": "2026-07-10T05:38:21Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/255",
+    "author": "pacemrc",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 254,
+    "title": "[BUG]bilibili视频解析失败",
+    "created_at": "2025-12-08T16:46:11Z",
+    "updated_at": "2026-04-24T07:20:00Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/254",
+    "author": "Cion-Da",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 253,
+    "title": "[BUG]",
+    "created_at": "2025-12-02T13:17:27Z",
+    "updated_at": "2025-12-06T05:36:00Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/253",
+    "author": "MinanaYaa",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 252,
+    "title": "笔记生成失败",
+    "created_at": "2025-12-02T09:11:29Z",
+    "updated_at": "2026-01-03T08:21:04Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/252",
+    "author": "MinanaYaa",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 251,
+    "title": "Q群已满，需要验证进入，微信群扫描显示过期",
+    "created_at": "2025-11-30T08:57:55Z",
+    "updated_at": "2026-02-25T08:03:30Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/251",
+    "author": "786788808",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 250,
+    "title": "[BUG]模型选择一栏没有可选项",
+    "created_at": "2025-11-29T14:29:13Z",
+    "updated_at": "2025-12-02T06:13:17Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/250",
+    "author": "leaf712",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 249,
+    "title": "视频加载进软件，用户自己做笔记的功能",
+    "created_at": "2025-11-21T20:26:24Z",
+    "updated_at": "2025-11-21T20:26:24Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/249",
+    "author": "seahoo",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 248,
+    "title": "无法生成笔记",
+    "created_at": "2025-11-20T02:47:17Z",
+    "updated_at": "2025-11-20T02:53:07Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/248",
+    "author": "YTLStudio",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 246,
+    "title": "无法进入软件",
+    "created_at": "2025-11-12T14:30:27Z",
+    "updated_at": "2025-12-07T16:02:39Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/246",
+    "author": "ReGalLong",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 244,
+    "title": "ImportError: libctranslate2-bc15bf3f.so.4.5.0: cannot enable executable stack as shared object requires: Invalid argument",
+    "created_at": "2025-11-06T14:25:26Z",
+    "updated_at": "2025-11-06T14:35:18Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/244",
+    "author": "adaaaaaa",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 243,
+    "title": "[BUG] 一直提示API地址错误",
+    "created_at": "2025-11-05T07:17:37Z",
+    "updated_at": "2025-11-25T04:48:22Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/243",
+    "author": "dragon52406",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 242,
+    "title": "[BUG] dockerfile 把包报错",
+    "created_at": "2025-10-29T09:07:32Z",
+    "updated_at": "2025-10-29T09:07:32Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/242",
+    "author": "songbl",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 240,
+    "title": "[BUG]",
+    "created_at": "2025-10-13T13:55:10Z",
+    "updated_at": "2025-10-13T13:55:45Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/240",
+    "author": "AAAAAAmos",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 239,
+    "title": "360报毒，感染型病毒(Win32/Trojan.Generic.HoMATy0A)",
+    "created_at": "2025-10-09T13:55:05Z",
+    "updated_at": "2026-07-07T19:11:09Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/239",
+    "author": "0x208X",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 237,
+    "title": "[BUG]docker部署的不能上传音频，",
+    "created_at": "2025-10-08T09:45:19Z",
+    "updated_at": "2025-10-08T09:45:19Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/237",
+    "author": "Lemlj",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 236,
+    "title": "[求助]确认使用VL相关模型（Qwen/Qwen2.5-VL-72B-Instruct），无法生成带原片截图的笔记（7分钟以下的视频没问题）。",
+    "created_at": "2025-10-04T15:03:10Z",
+    "updated_at": "2025-10-12T07:42:58Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/236",
+    "author": "wintubi",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 235,
+    "title": "[BUG]windows用exe安装的，报后台错误怎么查看日志？",
+    "created_at": "2025-10-04T11:35:56Z",
+    "updated_at": "2026-01-03T08:21:40Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/235",
+    "author": "tuzisang",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 234,
+    "title": "[FEATHURE]希望能添加文字稿转笔记功能",
+    "created_at": "2025-10-02T16:21:48Z",
+    "updated_at": "2025-10-02T16:21:48Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/234",
+    "author": "alsip-L",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 233,
+    "title": "[BUG]跳转哔哩哔哩的多P视频时，链接存在问题，需要把如_pN改为?p=N才能正确跳转",
+    "created_at": "2025-10-02T14:15:20Z",
+    "updated_at": "2025-10-02T14:15:20Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/233",
+    "author": "Shrymp-Y5S1",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 231,
+    "title": "[BUG]bug实在太多了，完全用不了",
+    "created_at": "2025-10-01T07:30:01Z",
+    "updated_at": "2025-10-01T07:30:01Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/231",
+    "author": "JinTingqiang",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 230,
+    "title": "[FEATHURE] 希望能增加本地视频文件上传和做笔记",
+    "created_at": "2025-09-28T15:25:16Z",
+    "updated_at": "2025-09-28T15:25:16Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/230",
+    "author": "xiaodeme-aha",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 229,
+    "title": "启动不起来",
+    "created_at": "2025-09-28T15:22:39Z",
+    "updated_at": "2025-09-28T15:22:39Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/229",
+    "author": "xiaodeme-aha",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 228,
+    "title": "[BUG]",
+    "created_at": "2025-09-27T14:34:58Z",
+    "updated_at": "2025-09-27T14:34:58Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/228",
+    "author": "dfly19999",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 227,
+    "title": "[BUG]",
+    "created_at": "2025-09-27T14:34:51Z",
+    "updated_at": "2025-09-27T14:34:51Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/227",
+    "author": "dfly19999",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 226,
+    "title": "[BUG]",
+    "created_at": "2025-09-26T01:22:17Z",
+    "updated_at": "2025-09-26T01:22:17Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/226",
+    "author": "caocaoxxx",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 225,
+    "title": "[BUG] 微信交流群，二维码过期了",
+    "created_at": "2025-09-22T08:20:43Z",
+    "updated_at": "2025-09-22T08:20:43Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/225",
+    "author": "xPartners",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 224,
+    "title": "dockers安装，但bilinote-backend（后端）无法运行",
+    "created_at": "2025-09-20T15:04:11Z",
+    "updated_at": "2025-10-12T07:15:25Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/224",
+    "author": "wintubi",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 223,
+    "title": "关于使用siliconflow的api接口失败的问题",
+    "created_at": "2025-09-19T07:39:59Z",
+    "updated_at": "2026-01-25T10:55:53Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/223",
+    "author": "Faraday2000",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 222,
+    "title": "打包时是否疏漏了部分环境依赖",
+    "created_at": "2025-09-12T11:06:55Z",
+    "updated_at": "2025-09-12T11:06:55Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/222",
+    "author": "shijianus",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 221,
+    "title": "[FEATHURE]长视频的笔记应该适当增加",
+    "created_at": "2025-09-10T14:51:57Z",
+    "updated_at": "2025-09-10T14:51:57Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/221",
+    "author": "LimbusSpace",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 220,
+    "title": "[BUG]文件过大导致AI API请求失败",
+    "created_at": "2025-09-09T21:56:11Z",
+    "updated_at": "2025-12-08T12:49:29Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/220",
+    "author": "Andrea-lyz",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 219,
+    "title": "一个简单批处理，在退出BiliNote时自动结束BiliNoteBackend.exe",
+    "created_at": "2025-09-09T21:24:05Z",
+    "updated_at": "2025-09-09T21:24:42Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/219",
+    "author": "Andrea-lyz",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 218,
+    "title": "[BUG]新增gemini的api地址和key连接不通",
+    "created_at": "2025-09-06T13:47:43Z",
+    "updated_at": "2025-12-02T10:02:47Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/218",
+    "author": "wylgl",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 215,
+    "title": "[BUG]笔记生成失败  请检查后台或稍后再试",
+    "created_at": "2025-09-05T08:46:37Z",
+    "updated_at": "2025-11-09T07:17:33Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/215",
+    "author": "jinpeng0804",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 214,
+    "title": "[BUG]MacOS端无法初始化后端",
+    "created_at": "2025-08-17T14:59:57Z",
+    "updated_at": "2025-08-17T14:59:57Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/214",
+    "author": "pepedd864",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 213,
+    "title": "软件停止维护了吗？",
+    "created_at": "2025-08-13T09:53:23Z",
+    "updated_at": "2025-11-28T04:17:16Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/213",
+    "author": "tomwyz1-web",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 212,
+    "title": "docker部署一直无法正常加载图片",
+    "created_at": "2025-08-11T08:38:35Z",
+    "updated_at": "2025-08-19T05:49:27Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/212",
+    "author": "mokaba666-cmd",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 211,
+    "title": "[BUG]本地上传视频无法使用",
+    "created_at": "2025-08-11T00:57:30Z",
+    "updated_at": "2025-08-11T00:57:30Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/211",
+    "author": "Lemlj",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 209,
+    "title": "[BUG]Windows本地安装了FFmpeg并成功运行该软件几次后，又重新报错未安装FFmpeg以及报错[Errno 22] Invalid argument",
+    "created_at": "2025-08-09T03:50:40Z",
+    "updated_at": "2026-06-16T17:40:08Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/209",
+    "author": "Passerby90368",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 208,
+    "title": "关于截图机制",
+    "created_at": "2025-08-06T11:18:51Z",
+    "updated_at": "2025-08-06T11:18:51Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/208",
+    "author": "Kenwwww",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 207,
+    "title": "[FEATHURE]不使用openai的接口获取大模型列表",
+    "created_at": "2025-08-06T07:01:39Z",
+    "updated_at": "2025-08-06T07:01:39Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/207",
+    "author": "aeoform",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 206,
+    "title": "[BUG]本地多核cpu无法全部使用，只能用4核",
+    "created_at": "2025-08-06T06:57:30Z",
+    "updated_at": "2025-08-06T06:57:30Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/206",
+    "author": "aeoform",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 205,
+    "title": "[FEATHURE]在大模型调用速率过高时自动重试",
+    "created_at": "2025-08-06T06:54:03Z",
+    "updated_at": "2025-08-06T06:54:03Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/205",
+    "author": "aeoform",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 203,
+    "title": "[BUG] Win打包版本1.8.1 无法使用",
+    "created_at": "2025-08-02T01:50:05Z",
+    "updated_at": "2025-08-02T01:54:00Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/203",
+    "author": "Victsz",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 202,
+    "title": "[FEATHURE] 小宇宙的播客链接有可能支持吗",
+    "created_at": "2025-07-30T13:54:26Z",
+    "updated_at": "2025-07-30T13:54:26Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/202",
+    "author": "Victsz",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 201,
+    "title": "[BUG]connection error",
+    "created_at": "2025-07-30T04:17:12Z",
+    "updated_at": "2025-07-30T04:17:12Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/201",
+    "author": "adaaaaaa",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 200,
+    "title": "[BUG]求更新微信群二维码",
+    "created_at": "2025-07-30T02:12:19Z",
+    "updated_at": "2025-07-30T02:12:19Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/200",
+    "author": "adaaaaaa",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 199,
+    "title": "[BUG] Windows 版无法修改语音转文本的引擎",
+    "created_at": "2025-07-24T03:51:10Z",
+    "updated_at": "2025-07-24T03:51:10Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/199",
+    "author": "UnspokenSpell",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 198,
+    "title": "[FEATHURE] 支持更多语音转文本方法： Azure",
+    "created_at": "2025-07-22T16:09:06Z",
+    "updated_at": "2025-08-11T12:18:20Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/198",
+    "author": "UnspokenSpell",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 197,
+    "title": "[FEATHURE] 构建容器镜像加入工作流",
+    "created_at": "2025-07-22T15:40:46Z",
+    "updated_at": "2025-07-29T02:15:01Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/197",
+    "author": "UnspokenSpell",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 190,
+    "title": "[BUG]Frontend build error whih Rollup@4.45.0",
+    "created_at": "2025-07-14T08:15:30Z",
+    "updated_at": "2025-07-14T08:15:30Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/190",
+    "author": "cyjcolon",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 189,
+    "title": "[BUG] 我很确定新版本的API连接有大问题",
+    "created_at": "2025-07-14T06:59:13Z",
+    "updated_at": "2025-09-23T18:18:49Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/189",
+    "author": "thinktraveller",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 184,
+    "title": "[FEATHURE] 增加上传文档中的图片到OSS中",
+    "created_at": "2025-07-11T03:52:37Z",
+    "updated_at": "2025-07-11T03:52:37Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/184",
+    "author": "xavier2code",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 183,
+    "title": "windows最新版本一直卡在后端正在初始化",
+    "created_at": "2025-07-10T06:34:03Z",
+    "updated_at": "2025-12-07T16:04:36Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/183",
+    "author": "JiajunLi-2333",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 182,
+    "title": "[BUG] 本地视频链接判断存在问题",
+    "created_at": "2025-07-10T05:40:12Z",
+    "updated_at": "2025-07-10T05:40:36Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/182",
+    "author": "A1ne",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 180,
+    "title": "希望可以支持微信视频",
+    "created_at": "2025-07-07T08:07:13Z",
+    "updated_at": "2025-08-04T07:21:06Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/180",
+    "author": "lucas-yg",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 177,
+    "title": "配置了ollama本地模型Qwen3,运行时报错，openai.APIConnectionError: Connection error.",
+    "created_at": "2025-07-04T03:34:29Z",
+    "updated_at": "2026-06-09T07:30:05Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/177",
+    "author": "heqiang1992",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 175,
+    "title": "[FEATHURE] 直接下载识别到的字幕",
+    "created_at": "2025-07-03T09:49:44Z",
+    "updated_at": "2025-07-03T09:49:44Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/175",
+    "author": "Paper-Dragon",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 174,
+    "title": "[FEATHURE] 利用gemini 2.5 plus 生产标准markdown格式时间戳跳转字幕",
+    "created_at": "2025-07-03T08:35:59Z",
+    "updated_at": "2025-07-03T08:35:59Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/174",
+    "author": "neowukong",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 173,
+    "title": "为什么没有报错但是生成出来的笔记是空的",
+    "created_at": "2025-07-02T04:09:16Z",
+    "updated_at": "2025-07-02T04:09:16Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/173",
+    "author": "dami77dddd",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 171,
+    "title": "[问题答疑]我把我的经验写在这里，方便youtube用户使用（希望不要被关）",
+    "created_at": "2025-06-30T07:51:35Z",
+    "updated_at": "2025-08-12T20:23:33Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/171",
+    "author": "dentistfrankchen",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 169,
+    "title": "[BUG]报错[Errno 22] Invalid argument",
+    "created_at": "2025-06-29T07:36:40Z",
+    "updated_at": "2026-02-04T08:14:42Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/169",
+    "author": "qweyyds666",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 168,
+    "title": "[BUG] 只要启用“视频理解” 就会出发异常中止",
+    "created_at": "2025-06-29T03:55:36Z",
+    "updated_at": "2025-06-29T03:55:36Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/168",
+    "author": "yshib88",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 167,
+    "title": "[BUG] Invalid argument",
+    "created_at": "2025-06-27T14:55:53Z",
+    "updated_at": "2026-02-04T08:14:37Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/167",
+    "author": "xuechao6",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 164,
+    "title": "nginx报错，网页一直显示后端正在初始化",
+    "created_at": "2025-06-24T07:15:28Z",
+    "updated_at": "2025-06-27T15:47:18Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/164",
+    "author": "MacBook-Pro-gala",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 163,
+    "title": "无法正常添加其他模型提供商",
+    "created_at": "2025-06-23T16:15:16Z",
+    "updated_at": "2025-08-02T05:22:44Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/163",
+    "author": "thinktraveller",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 162,
+    "title": "[BUG]抖音的链接无法生成总结",
+    "created_at": "2025-06-23T10:28:12Z",
+    "updated_at": "2026-04-28T06:53:11Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/162",
+    "author": "Lfromjie",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 161,
+    "title": "[BUG]影片擷取,Gemini Api連接問題",
+    "created_at": "2025-06-23T04:59:57Z",
+    "updated_at": "2025-06-23T05:50:04Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/161",
+    "author": "zxc8976",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 157,
+    "title": "[BUG]部屬OLLAMA的QWEN3 但是在後台一直不能調用",
+    "created_at": "2025-06-22T11:45:48Z",
+    "updated_at": "2025-06-23T02:46:20Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/157",
+    "author": "zxc8976",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 156,
+    "title": "[BUG]最新版本改到大动脉了吧",
+    "created_at": "2025-06-22T08:06:24Z",
+    "updated_at": "2025-07-07T10:29:48Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/156",
+    "author": "shuhengdaxia",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 155,
+    "title": "[BUG]mac 进不去",
+    "created_at": "2025-06-22T02:37:01Z",
+    "updated_at": "2026-04-27T14:17:28Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/155",
+    "author": "urniar",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 145,
+    "title": "[BUG]服务器错误，请稍后再试",
+    "created_at": "2025-06-19T10:36:44Z",
+    "updated_at": "2025-06-20T06:15:02Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/145",
+    "author": "mr-bob-chang",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 139,
+    "title": "[BUG]为什么不能上传本地视频",
+    "created_at": "2025-06-19T06:50:42Z",
+    "updated_at": "2025-06-21T04:48:44Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/139",
+    "author": "888bik",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 138,
+    "title": "[BUG]前端没有生成笔记选项",
+    "created_at": "2025-06-19T03:33:03Z",
+    "updated_at": "2025-06-19T03:33:03Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/138",
+    "author": "lily110",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 137,
+    "title": "[BUG]",
+    "created_at": "2025-06-18T07:05:29Z",
+    "updated_at": "2025-06-19T06:51:18Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/137",
+    "author": "Jeffrey1799",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 135,
+    "title": "[FEATHURE]",
+    "created_at": "2025-06-12T18:55:51Z",
+    "updated_at": "2025-06-13T01:54:30Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/135",
+    "author": "starlightliu",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 134,
+    "title": "[FEATHURE]增加对b站视频合集的笔记生成，而不是一个个视频进行笔记生成",
+    "created_at": "2025-06-07T07:56:00Z",
+    "updated_at": "2025-06-07T07:56:47Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/134",
+    "author": "shmily91",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 128,
+    "title": "[BUG]使用过程中退出",
+    "created_at": "2025-06-05T02:18:41Z",
+    "updated_at": "2025-06-05T02:25:56Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/128",
+    "author": "Dougzl",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 127,
+    "title": "[FEATHURE] 支持其他语音识别工具吗，比如FunASR",
+    "created_at": "2025-06-04T02:42:10Z",
+    "updated_at": "2025-06-04T12:26:36Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/127",
+    "author": "maodouzi123",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 125,
+    "title": "[FEATHURE] 增加导入字幕功能",
+    "created_at": "2025-05-30T02:04:29Z",
+    "updated_at": "2025-05-30T02:04:29Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/125",
+    "author": "jinshuqishi2019",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 122,
+    "title": "支持导出‘转写结果’，并提供中英文对照",
+    "created_at": "2025-05-26T11:47:43Z",
+    "updated_at": "2025-05-26T12:35:38Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/122",
+    "author": "zhaipanyu",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 120,
+    "title": "[FEATHURE]",
+    "created_at": "2025-05-26T03:04:30Z",
+    "updated_at": "2025-05-26T03:04:30Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/120",
+    "author": "tod-zhang",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 119,
+    "title": "[FEATHURE] 能否基于 bilibili 的字幕接口快速生成总结",
+    "created_at": "2025-05-26T01:59:05Z",
+    "updated_at": "2025-06-27T04:28:34Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/119",
+    "author": "caijiehong",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 114,
+    "title": "[FEATHURE] 比如用户提供视频，批量处理视频，而不是用户一个个操作",
+    "created_at": "2025-05-19T13:12:20Z",
+    "updated_at": "2025-05-21T01:05:26Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/114",
+    "author": "qqlcx5",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 113,
+    "title": "[BUG]YOUTUBE老是显示失败，已有全局梯子。不知何故？",
+    "created_at": "2025-05-19T04:21:31Z",
+    "updated_at": "2026-07-10T05:38:35Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/113",
+    "author": "steed888",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 112,
+    "title": "[FEATHURE] 是否考虑增加API接口或者MCP接口支持接入智能体",
+    "created_at": "2025-05-18T02:07:52Z",
+    "updated_at": "2025-05-18T02:26:54Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/112",
+    "author": "JeazW",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 111,
+    "title": "[FEATHURE] 支持用户登录",
+    "created_at": "2025-05-18T02:06:45Z",
+    "updated_at": "2025-05-18T02:26:46Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/111",
+    "author": "JeazW",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 110,
+    "title": "[FEATHURE] 自定义prompt功能。",
+    "created_at": "2025-05-18T02:06:02Z",
+    "updated_at": "2025-05-18T02:27:07Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/110",
+    "author": "JeazW",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 107,
+    "title": "在线体验网址（https://www.bilinote.app/）无法生成笔记",
+    "created_at": "2025-05-14T09:24:09Z",
+    "updated_at": "2025-05-14T09:26:40Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/107",
+    "author": "CalvinLin011010",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 105,
+    "title": "[BUG]",
+    "created_at": "2025-05-13T09:11:23Z",
+    "updated_at": "2025-06-10T10:17:05Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/105",
+    "author": "nhj-loe",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 86,
+    "title": "[FEATHURE] 数据处理分阶段设定特定api接口",
+    "created_at": "2025-05-08T14:57:19Z",
+    "updated_at": "2025-05-08T14:57:19Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/86",
+    "author": "withhonor007",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 85,
+    "title": "[FEATHURE] 定时任务列表 功能",
+    "created_at": "2025-05-08T14:53:20Z",
+    "updated_at": "2025-05-08T14:53:20Z",
+    "labels": [
+      "enhancement"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/85",
+    "author": "withhonor007",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 76,
+    "title": "[BUG]",
+    "created_at": "2025-05-05T06:52:28Z",
+    "updated_at": "2025-05-06T02:32:37Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/76",
+    "author": "sjkxq",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 70,
+    "title": "[BUG]Unprocessable Entity",
+    "created_at": "2025-05-02T18:48:39Z",
+    "updated_at": "2025-06-30T07:47:17Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/70",
+    "author": "qomosoloto",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 69,
+    "title": "[BUG]",
+    "created_at": "2025-05-02T18:29:14Z",
+    "updated_at": "2025-11-25T15:41:06Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/69",
+    "author": "jiangqing03",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 64,
+    "title": "[BUG] Docker 安装出错",
+    "created_at": "2025-05-02T08:08:35Z",
+    "updated_at": "2025-05-20T07:34:22Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/64",
+    "author": "yibie",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 59,
+    "title": "[BUG] docker-compose启动时前端项目报: /start.sh: not found",
+    "created_at": "2025-04-29T07:12:17Z",
+    "updated_at": "2025-04-29T08:11:43Z",
+    "labels": [
+      "bug"
+    ],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/59",
+    "author": "SupoorMan",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 52,
+    "title": "提示未安装torch，无法调用cuda",
+    "created_at": "2025-04-27T14:35:32Z",
+    "updated_at": "2025-07-03T09:35:34Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/52",
+    "author": "ConnerCai",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 39,
+    "title": "Frontend 错误",
+    "created_at": "2025-04-25T07:22:49Z",
+    "updated_at": "2025-04-27T07:55:01Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/39",
+    "author": "TWSW2016",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 38,
+    "title": "Markdown格式问题",
+    "created_at": "2025-04-25T07:08:57Z",
+    "updated_at": "2026-05-05T00:24:53Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/38",
+    "author": "Clear-Dream-Field",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 34,
+    "title": "在debian10系统安装报错",
+    "created_at": "2025-04-24T00:23:20Z",
+    "updated_at": "2025-04-24T01:10:19Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/34",
+    "author": "Armwillking",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 33,
+    "title": "[enhancement]建议添加一个批量生成的功能",
+    "created_at": "2025-04-23T13:12:08Z",
+    "updated_at": "2025-07-30T16:42:11Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/33",
+    "author": "Eli-Zxh",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 28,
+    "title": "[Feature]请问预计什么时候会出mac版的呢？",
+    "created_at": "2025-04-19T03:27:21Z",
+    "updated_at": "2026-07-07T19:02:08Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/28",
+    "author": "kixuan",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 25,
+    "title": "[Feature]适配流式输出模型",
+    "created_at": "2025-04-18T03:03:42Z",
+    "updated_at": "2025-04-18T03:03:42Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/25",
+    "author": "Zee0320",
+    "status": "queued",
+    "disposition": "-"
+  },
+  {
+    "number": 20,
+    "title": "Windows打包版本双击运行无法启动，闪退，win11",
+    "created_at": "2025-04-17T15:04:23Z",
+    "updated_at": "2026-07-07T19:02:40Z",
+    "labels": [],
+    "url": "https://github.com/JefferyHcool/BiliNote/issues/20",
+    "author": "lulistart",
+    "status": "queued",
+    "disposition": "-"
+  }
+]
